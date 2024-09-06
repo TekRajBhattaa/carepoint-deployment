@@ -28,7 +28,7 @@ jobs:
       # Deploy to WP Engine (Development)
       - name: Deploy to WP Engine (Dev)
         if: github.ref == 'refs/heads/development'
-        uses: wpengine/github-action-wpe-site-deploy@v3
+        uses: wpengine/github-action-wpe-site-deploy@v4
         with:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           WPE_ENV: 'Dev'
@@ -37,7 +37,7 @@ jobs:
       # Deploy to WP Engine (Staging)
       - name: Deploy to WP Engine (Staging)
         if: github.ref == 'refs/heads/staging'
-        uses: wpengine/github-action-wpe-site-deploy@v3
+        uses: wpengine/github-action-wpe-site-deploy@v4
         with:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           WPE_ENV: 'Stg'
@@ -46,7 +46,7 @@ jobs:
       # Deploy to WP Engine (Production)
       - name: Deploy to WP Engine (Production)
         if: github.ref == 'refs/heads/main'
-        uses: wpengine/github-action-wpe-site-deploy@v3
+        uses: wpengine/github-action-wpe-site-deploy@v4
         with:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           WPE_ENV: 'Prd'
