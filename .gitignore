@@ -1,0 +1,48 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*
+web/app/themes/*
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
+web/app/object-cache.php
+web/ico.svg
+
+# Custom Themes / Plugins
+!web/app/mu-plugins/bedrock-disallow-indexing
+!web/app/mu-plugins/bedrock-autoloader.php
+!web/app/mu-plugins/register-theme-directory.php
+!web/app/mu-plugins/taxonomy-term-image
+!web/app/mu-plugins/vdplug
+!web/app/themes/vdclassic
+
+# NON Composer managed plugins :(
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.dist
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+#misc
+.idea
+*.cache
+build
+node_modules
+tests/e2e/.auth
+tests/e2e/artifacts
+web/app/wflogs

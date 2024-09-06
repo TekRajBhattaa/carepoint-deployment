@@ -1,0 +1,25 @@
+/*
+ * Custom Media Queries in CSS, following the CSS Media Queries specification.
+ * https://www.w3.org/TR/mediaqueries-5/
+ * https://drafts.csswg.org/mediaqueries-5/#custom-mq
+ * https://www.npmjs.com/package/postcss-media-minmax
+ */
+
+/* Breakpoint 1 */
+@custom-media --vp-xsmall (width >= 560px);
+@custom-media --vp-xsmall-max (width < 768px);
+
+/* Breakpoint 2 */
+@custom-media --vp-small (width >= 768px);
+@custom-media --vp-small-max (width < 992px);
+
+/* Breakpoint 3 */
+@custom-media --vp-medium (width >= 992px);
+@custom-media --vp-medium-max (width < 1200px);
+
+/* Breakpoint 4 */
+@custom-media --vp-large (width >= 1200px);
+@custom-media --vp-large-max (width < 1400px);
+
+/* Breakpoint 5 */
+@custom-media --vp-xlarge (width >= 1400px);

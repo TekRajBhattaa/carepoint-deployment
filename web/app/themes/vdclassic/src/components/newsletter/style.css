@@ -1,0 +1,9 @@
+/**
+ * The following css class is NOT in our code and set with gravity forms!
+ */
+
+/* stylelint-disable-next-line */
+.block-newsletter_wrapper .gfield_checkbox {
+    display: flex;
+    gap: 20px;
+}

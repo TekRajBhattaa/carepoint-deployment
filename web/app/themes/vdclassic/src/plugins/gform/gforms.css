@@ -1,0 +1,231 @@
+/* stylelint-disable */
+button:not([disabled]) {
+    cursor: pointer;
+}
+
+input,
+button,
+select,
+textarea {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 400;
+    max-width: 100%;
+}
+
+.gform-field-label {
+    color: var(--wp--preset--color--white) !important;
+    cursor: pointer;
+}
+
+.gfield_validation_message {
+    --gform-theme-local-color: var(--gform-theme-color-danger) !important;
+}
+
+.gfield_error input[type='text'], .gfield_error input[type='email'], .gfield_error input[type='tel'], .gfield_error select {
+    border-inline-start: 5px solid var(--gform-theme-color-danger) !important;
+}
+
+.gform-field-label--type-inline,
+.gform-field-label--type-inline * {
+    display: inline;
+}
+
+/* TODO: Find out how to style this thing...  */
+.gfield--type-html {
+    display: none;
+}
+
+/**
+ * We have to use this bad selectors to increase Specificity :/
+ */
+.gravity-theme {
+
+    /* Layout */
+    &.gform_wrapper div.gform_fields {
+        gap: var(--gu2);
+        margin-bottom: var(--gu2);
+    }
+
+    /* Label */
+    & .gfield_label {
+        font-size: 16px;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    /* Label required */
+    & .gfield_required_text {
+        color: var(--wp--preset--color--dark-pink) !important;
+        padding-left: 5px;
+    }
+
+    /* Label above Text */
+    & .gfield--type-select,
+    & .gfield--type-phone,
+    & .gfield--type-email,
+    & .gfield--type-text {
+        & .gfield_label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    }
+
+    /* --- Text --- */
+    & .gfield--type-select,
+    & .gfield--type-phone,
+    & .gfield--type-email,
+    & .gfield--type-text {
+        & input {
+            color: #0a0a0a;
+            border-radius: 5px;
+            padding: 12px !important;
+        }
+
+        &.gfield_error {
+            & input {
+                border-left: 5px solid var(--wp--preset--color--dark-pink) !important;
+            }
+        }
+    }
+
+
+
+    /* --- Select --- */
+    & .gfield--type-select {
+        & select {
+            border-radius: 5px;
+            padding: 13px !important;
+            appearance: none;
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-image: url(data:image/svg+xml, <svg width="14" height="11" viewBox="0 0 14 11" xmlns="http://www.w3.org/2000/svg">\
+                <path d="M13 1L7 9L1 1" fill="#8A8A8A" />\
+            </svg>);
+        }
+    }
+
+    /* --- Checkbox --- */
+    & .gfield_checkbox .gfield-choice-input {
+        width: var(--gu2);
+        height: var(--gu2);
+        border-radius: 0 !important;
+        margin: 0;
+        vertical-align: sub;
+        background-color: transparent !important;
+        appearance: none;
+        cursor: pointer;
+
+        &::before {
+            display: block;
+            border: 2px solid var(--wp--preset--color--blue);
+            content: '';
+            width: var(--gu2);
+            height: var(--gu2);
+        }
+
+        &:checked::before {
+            background: var(--wp--preset--color--blue) url('data:image/svg+xml, <svg width="19" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.959.61a1 1 0 0 0-.695.322L6 13.174 1.935 8.758a1 1 0 0 0-1.412-.059 1 1 0 0 0-.059 1.412l4.8 5.219a1 1 0 0 0 1.472 0l12-13.045a1 1 0 0 0-.059-1.412 1 1 0 0 0-.718-.264z"
+                fill="#fff" />
+            </svg>');
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus::before,
+        &:hover::before {
+            border-color: var(--wp--preset--color--white);
+        }
+    }
+
+    .gform_confirmation_wrapper {
+        text-align: center;
+    }
+
+    /* --- Radio --- */
+    & .gfield_radio .gfield-choice-input {
+        width: var(--gu2);
+        height: var(--gu2);
+        margin: 0;
+        vertical-align: sub;
+        background-color: transparent !important;
+        appearance: none;
+        cursor: pointer;
+
+        /* default */
+        &::before {
+            display: block;
+            width: var(--gu2);
+            height: var(--gu2);
+            content: '';
+            background: url('data:image/svg+xml, <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">\
+                <circle cx="10" cy="10" r="9" fill="none" stroke-width="2" stroke="#009ef3"/>\
+            </svg>');
+        }
+
+        /* checked */
+        &:checked::before {
+            background: url('data:image/svg+xml, <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">\
+                <circle cx="10" cy="10" r="9" fill="#009ef3" stroke-width="2" stroke="#fff"/>\
+            </svg>');
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        /* focus & hover */
+        &:focus::before,
+        &:hover::before {
+            background: url('data:image/svg+xml, <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">\
+                <circle cx="10" cy="10" r="9" fill="#fff" stroke-width="2" stroke="#009ef3"/>\
+            </svg>');
+        }
+    }
+
+    /* --- Validation --- */
+    & div.gform_validation_errors {
+        border-radius: 5px;
+        border: 1px solid var(--wp--preset--color--dark-pink);
+        padding: var(--gu2);
+        margin-bottom: var(--gu2);
+    }
+
+    & div.validation_message {
+        background-color: transparent;
+        border: 0;
+        padding: 5px 0;
+    }
+
+    & .gfield_error div.validation_message {
+        font-weight: 500;
+        color: var(--wp--preset--color--dark-pink)
+    }
+
+    & .gform_submission_error {
+        color: var(--wp--preset--color--dark-pink);
+        margin-bottom: 0 !important;
+        font-size: inherit;
+    }
+
+    & .gform_button {
+        color: #fff;
+        background: var(--wp--preset--color--blaze-orange);
+        font-weight: 600 !important;
+        font-size: 18px !important;
+        border: 0;
+        border-radius: 5px;
+        padding: var(--gu1) 25px!important;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--wp--preset--color--light-orange);
+        }
+    }
+}
+/* stylelint-enable */

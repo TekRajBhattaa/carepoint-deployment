@@ -1,0 +1,63 @@
+/**
+ * For a higher Specificity we add .section to avoid !important rule
+ * ...not really perfect but much better then important :/
+ */
+
+
+.section .uagb-tabs__wrap {
+    background-color: var(--wp--preset--color--regal-blue);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section .uagb-tabs__wrap .uagb-tabs__body-wrap {
+    border: 0 !important;
+    padding: 0;
+}
+
+.section .uagb-tabs__wrap .uagb-tabs__body-container {
+    padding: 25px;
+}
+
+.section .uagb-tabs__wrap ul li::before {
+    content: none;
+}
+
+.section .uagb-tabs__wrap.uagb-tabs__hstyle1-desktop .uagb-tab {
+    text-align: left;
+    margin: 0;
+    border: 0 !important;
+}
+
+.section .uagb-tabs__wrap.uagb-tabs__stack1-mobile ul.uagb-tabs__panel .uagb-tab {
+    margin: 0 0 2px 0;
+}
+
+.section .uagb-tabs__wrap ul.uagb-tabs__panel {
+    width: 100%;
+    align-items: normal !important;
+    background-color: var(--wp--preset--color--regal-blue);
+}
+
+.section .uagb-tab .uagb-tabs-list {
+    padding: 25px !important;
+    width: 100%;
+}
+
+.section .uagb-tab:not(.uagb-tabs__active) a {
+    background-color: var(--wp--preset--color--blue);
+}
+
+.section .uagb-tabs__active a {
+    background-color: var(--wp--preset--color--regal-blue);
+}
+
+/** Editor tweaks */
+
+.editor-styles-wrapper .uagb-tabs__wrap {
+    overflow: visible;
+}
+
+.editor-styles-wrapper .uagb-tabs__wrap ul.uagb-tabs__panel {
+    margin-top: 0 !important;
+}

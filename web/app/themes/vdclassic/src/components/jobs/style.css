@@ -1,0 +1,191 @@
+.jobsearch__results {
+    margin-top: 34px;
+}
+
+.search__result {
+    margin-top: 34px;
+    border-bottom: 1px solid var(--wp--preset--color--blue);
+    padding-bottom: 34px;
+}
+
+.search__description {
+    display: flex;
+    flex-direction: row;
+    @media (--vp-small-max) {
+        flex-direction: column;
+    }
+}
+
+.jobinfo .wp-block-columns {
+    flex-direction: row;
+    @media (--vp-small-max) {
+        flex-direction: column-reverse;
+    }
+}
+
+.search__excerpt {
+    max-width: 82%;
+    padding-right: 6%;
+    @media (--vp-small-max) {
+        max-width: 100%;
+    }
+    @media (--vp-medium) {
+        max-width: 77%;
+    }
+    @media (--vp-large) {
+        max-width: 82%;
+    }
+}
+
+.search__title {
+    display: flex;
+}
+
+.search__title h4 span {
+    margin-left: 29px;
+}
+
+.job-search-form input {
+    width: 100%;
+    border-radius: 10px;
+    background: var(--wp--preset--color--dark-denim-blue);
+    border: 1px solid var(--wp--preset--color--blue);
+    height: 64px;
+    padding: 20px;
+    color: var(--wp--preset--color--white);
+}
+
+.job-search-form input::placeholder {
+    color: var(--wp--preset--color--white);
+}
+
+.job-search-form {
+    position: relative;
+}
+
+.job-search-form button {
+    position: absolute;
+    right: 0;
+    margin-top: 0;
+    background: var(--wp--preset--color--dark-denim-blue);
+    padding: 10px 15px 7px 15px;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid var(--wp--preset--color--blue);
+}
+
+.job-search-form button svg {
+    pointer-events: none;
+}
+
+.searchandfilter ul li::before {
+    background: none;
+    content: "";
+}
+
+.searchandfilter {
+    background: #013953;
+    max-width: 343px;
+    align-content: center;
+    border: 1px solid var(--wp--preset--color--blue);
+    border-radius: 10px;
+    width: 343px;
+    @media (--vp-medium-max) {
+        width: 100%;
+    }
+}
+
+.searchandfilter ul li.open h4 {
+    border-bottom: 1px solid var(--wp--preset--color--blue);
+}
+
+.searchandfilter ul li ul {
+    display: none;
+    transition: all 1s;
+}
+
+.searchandfilter ul li.open ul {
+    display: block;
+    transition: all 1s;
+}
+
+.job-search-info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.searchandfilter  .sf-field-search {
+    display: none;
+}
+
+.searchandfilter .sf-field-reset {
+    display: none;
+}
+
+.searchandfilter ul:first-child {
+    padding: 23px 18px 0 22px;
+}
+
+.searchandfilter ul {
+    padding: 0;
+}
+
+.searchandfilter ul li h4 {
+    margin: 0;
+    padding: 0 0 10px 0;
+    margin-bottom: 0 !important;
+    position: relative;
+}
+
+.searchandfilter > ul h4,
+.searchandfilter > ul label {
+    cursor: pointer;
+}
+
+.searchandfilter > ul > li {
+    padding: 5px 0 15px 0;
+}
+
+.searchandfilter > ul > li h4::after {
+    content: url(./down-arrow.svg);
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    transform: rotate(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.searchandfilter > ul > li.open h4::after {
+    transform: rotate(180deg);
+}
+
+.searchandfilter::before {
+    content: "Filters";
+    border-bottom: 1px solid var(--wp--preset--color--blue);
+    display: block;
+    padding: 17px 0 17px 20px;
+
+    background: url(./filter-icon.svg) no-repeat;
+    background-position: calc(100% - 26px) center;
+}
+
+.jobinfo .gform-footer {
+    text-align: center;
+}
+
+.jobinfo .wp-block-cover__inner-container .job-department {
+    margin-bottom: 10px;
+
+}
+
+.jobinfo .wp-block-cover__inner-container .job-location {
+    margin-bottom: 10px;
+}
+
+.jobinfo .wp-block-cover__inner-container .wp-block-buttons {
+    margin-top: 50px;
+}
+
+.jobform-heading {
+    margin-bottom: 74px !important;
+}

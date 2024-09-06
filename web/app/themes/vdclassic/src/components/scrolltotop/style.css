@@ -1,0 +1,33 @@
+.scrolltotop {
+    --offset: 50px;
+    border: 1px solid var(--wp--preset--color--blue);
+    border-radius: 4px;
+    bottom: 20px;
+    color: #fff;
+    background: var(--wp--preset--color--pure-white);
+    padding: 10px 10px 8px;
+    place-self: end;
+    position: fixed;
+    text-decoration: none;
+    white-space: nowrap;
+    right: 10px;
+    z-index: 999;
+    transform: scale(0);
+    transition: transform 250ms ease-in-out;
+}
+
+/* remove the below if you don't want smooth scrolling */
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.scrolltotop--enabled {
+    display: block;
+    transform: scale(1);
+}
+
+.scrolltotop:hover {
+    background: var(--wp--preset--color--blue);
+}

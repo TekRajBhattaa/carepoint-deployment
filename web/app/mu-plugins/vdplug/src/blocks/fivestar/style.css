@@ -1,0 +1,15 @@
+.fivestar {
+    display: block;
+    position: relative;
+    height: 45px;
+    background: url(./star.svg) repeat-x;
+    width: 129.5px;
+}
+
+.fivestar__bar {
+    position: absolute;
+    height: 100%;
+    height: 45px;
+    width: calc(var(--rate) * 20%);
+    background: url(./star--active.svg) repeat-x;
+}

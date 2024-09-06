@@ -1,0 +1,32 @@
+.toggle-block {
+    display: block;
+}
+
+.toggle-block__toggle {
+    display: inline-flex;
+    gap: var(--gu1);
+    min-height: 53px;
+    align-items: center;
+    border: 1px solid var(--wp--preset--color--blue);
+    padding: 0 var(--gu2);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.toggle-block__toggle svg {
+    width: var(--gu1);
+    height: var(--gu1);
+    transform: rotate(90deg);
+    transition: transform 300ms ease-in-out;
+}
+
+.toggle-block__content {
+    display: block;
+    margin-top: var(--gu2);
+}
+
+/* Modifier */
+
+.toggle-block--open .toggle-block__toggle svg {
+    transform: rotate(270deg);
+}

@@ -1,0 +1,21 @@
+.box {
+    --elevation: 4;
+    box-shadow:
+        0 0 calc((var(--elevation) * 0.225px) + 2px)
+        rgba(0, 0, 0, calc(0.11 * (2 - var(--background-luminance, 1)))),
+        0 calc(var(--elevation) * 0.4px)
+        calc((var(--elevation) * 0.9px))
+        rgba(0, 0, 0, calc(0.13 * (2 - var(--background-luminance, 1))));
+    border-radius: 4px;
+    padding: var(--gu2);
+    background-color: var(--wp--preset--color--regal-blue);
+    border: 1px solid var(--wp--preset--color--blue);
+}
+
+.box .wp-block-heading {
+    margin-bottom: var(--gu1) !important;
+}
+
+.box.is-style-no-border {
+    border-color: var(--wp--preset--color--regal-blue) !important;
+}

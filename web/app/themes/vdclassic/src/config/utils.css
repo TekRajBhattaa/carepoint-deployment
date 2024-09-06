@@ -1,0 +1,196 @@
+/* - - - - G R I D - L A Y O U T - - - - */
+
+.grid-columns--auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(10% + 7.5rem), 1fr));
+
+    /* Only Safari knows min() currently */
+    grid-template-columns: repeat(auto-fill, minmax(min(10rem, 100%), 1fr));
+    gap: var(--gu3);
+}
+
+.grid-columns--nowrap {
+    flex-flow: nowrap;
+}
+
+.grid-columns {
+    display: grid;
+    gap: var(--gridGap);
+}
+
+.grid-columns--nogap {
+    grid-gap: 0;
+}
+
+.grid-columns--max2 {
+    @media (--vp-small) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.grid-columns--max3 {
+    @media (--vp-small) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (--vp-medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.grid-columns--max4 {
+    @media (--vp-xsmall) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (--vp-medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (--vp-large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* - - - - L I S T - L A Y O U T - - - - */
+
+.grid-list {
+    display: flex;
+    flex-flow: column;
+    gap: var(--gu4);
+}
+
+.grid-list article {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    @media (--vp-xsmall) {
+        grid-template-columns: 20% 1fr;
+    }
+    @media (--vp-small) {
+        grid-template-columns: 33.33% 1fr;
+    }
+}
+
+.grid-list .teaser__inner {
+    padding: var(--gu1);
+}
+
+.grid-list .wp-block-image {
+    margin: 0;
+}
+
+/* - - - - V A R I O U S - - - - */
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--pageSpace);
+}
+
+.styled-scrollbars {
+    --scrollbar-foreground: hsla(180, 0%, 50%, 0.4);
+    --scrollbar-background: var(--wp--preset--color--blue);
+    scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+}
+
+.styled-scrollbars::-webkit-scrollbar {
+    width: var(--gu1); /* Mostly for vertical scrollbars */
+    height: var(--gu1); /* Mostly for horizontal scrollbars */
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb { /* Foreground */
+    background: var(--scrollbar-foreground);
+}
+
+.styled-scrollbars::-webkit-scrollbar-track { /* Background */
+    background: var(--scrollbar-background);
+}
+
+/**
+ * Rotate elements (icons)
+ */
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.rotate-270 {
+    transform: rotate(270deg);
+}
+
+
+.wp-block-media-text.alignwide {
+    max-width: 100% !important;
+}
+
+/**
+ * Frank friendly...
+ */
+
+svg.frc-icon {
+    margin-right: 10px;
+    float: left;
+    fill: #cadd37;
+    stroke: #cadd37;
+}
+
+/**
+ * Special Text format Options
+ * (search for registerFormatType in javascript)
+ */
+
+.format-uppercase {
+    text-transform: uppercase;
+}
+
+.format-fontweight500 {
+    font-weight: 500;
+}
+
+.listicons {
+    list-style: none;
+    padding-left: 25px;
+}
+
+.listicons li {
+    position: relative;
+}
+
+.listicons li::before {
+    content: none;
+}
+
+.listicons svg {
+    position: absolute;
+    top: 5px;
+    left: -25px;
+}
+
+.listicons a {
+    color: var(--wp--preset--color--blue);
+}
+
+.listicons a:hover {
+    color: #fff;
+}
+
+/**
+ * Yoast Breadcrumb
+ */
+
+.yoast-breadcrumbs {
+    background-color: var(--wp--preset--color--regal-blue);
+}
+
+.yoast-breadcrumbs > span {
+    display: block;
+    min-height: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: auto;
+    padding: 12px var(--pageSpace);
+    max-width: var(--wp--style--global--wide-size) !important;
+}
+
+.yoast-breadcrumbs span,
+.yoast-breadcrumbs a {
+    color: var(--wp--preset--color--blue);
+}

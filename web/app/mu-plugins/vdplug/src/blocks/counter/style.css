@@ -1,0 +1,5 @@
+.counter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--minWidth, 250px), 1fr));
+    grid-gap: var(--gridGap, 30px);
+}

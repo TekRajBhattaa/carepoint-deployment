@@ -1,0 +1,141 @@
+/* - - - - C A T E G O R Y  H E A D E R - - - - */
+
+.category-header {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    @media (--vp-medium) {
+        aspect-ratio: 4 / 1;
+    }
+}
+
+.category-header__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.category-header__content .container {
+    display: flex;
+    max-width: var(--wp--style--global--wide-size);
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.category-header__image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* - - - - P O S T - L A Y O U T - - - - */
+
+.post-layout__hero {
+    grid-area: hero;
+}
+
+.post-layout__sidebar {
+    grid-area: sidebar;
+    @media (--vp-medium) {
+        min-width: 300px;
+    }
+}
+
+.post-layout__sidebar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.post-layout__sidebar li::before {
+    content: none;
+}
+
+/* Hide all children */
+
+.post-layout__sidebar .children {
+    display: none;
+}
+
+/* Show children of current category */
+
+.post-layout__sidebar .current-cat-parent  .children,
+.post-layout__sidebar li.current-cat .children {
+    display: block;
+    padding-left: var(--gu2);
+}
+
+.post-layout__sidebar li.current-cat > a {
+    color: #fff;
+}
+
+.post-layout__sidebar a {
+    color: var(--wp--preset--color--blue);
+}
+
+.post-layout__content-wrap {
+    display: flex;
+    flex-flow: column;
+    gap: var(--gridGap);
+    max-width: var(--wp--style--global--wide-size);
+    margin: auto;
+    @media (--vp-medium) {
+        flex-flow: row;
+    }
+}
+
+.post-layout__content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* - - - - V I D E O  T E A S E R - - - - */
+
+button[data-youtube] {
+    margin-top: var(--gu1);
+    appearance: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    line-height: inherit;
+    padding: 0;
+    color: var(--wp--preset--color--blue);
+    cursor: pointer;
+}
+
+button[data-youtube] .icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+button[data-youtube]:hover {
+    text-decoration: underline;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+

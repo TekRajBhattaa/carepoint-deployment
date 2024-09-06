@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/bloginfo",
+    "version": "1.0.0",
+    "title": "Bloginfo",
+    "description": "Add a Bloginfo Block with author and date.",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "keywords": [
+        "Section",
+        "Separator"
+    ],
+    "usesContext": [
+        "postId",
+        "author"
+    ],
+    "render": "file:./render-template.php",
+    "attributes": {
+        "showAuthor": {
+            "type": "boolean",
+            "default": true
+        },
+        "author": {
+            "type": "string",
+            "source": "text",
+            "selector": ".bloginfo__author"
+        },
+        "date": {
+            "type": "string",
+            "source": "text",
+            "selector": ".bloginfo__date"
+        },
+        "category": {
+            "type": "string",
+            "source": "text",
+            "selector": ".bloginfo__category"
+        }
+    },
+    "example": {
+    },
+    "textdomain": "vdplug",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css"
+}

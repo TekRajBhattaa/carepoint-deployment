@@ -1,0 +1,37 @@
+/*	HORNETSECURITY CUSTOM FONTS */
+
+/* light */
+@font-face {
+    font-family: Hornet;
+    src: url(fonts/hornet-light-webfont.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* regular */
+@font-face {
+    font-family: Hornet;
+    src: url(fonts/hornet-regular-webfont.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* medium */
+@font-face {
+    font-family: Hornet;
+    src: url(fonts/hornet-medium-webfont.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* semibold */
+@font-face {
+    font-family: Hornet;
+    src: url(fonts/hornet-semibold-webfont.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}

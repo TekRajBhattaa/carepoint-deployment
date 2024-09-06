@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/vdslider",
+    "version": "1.0",
+    "title": "VD-Slider",
+    "icon": "slides",
+    "description": "Slider element using SwiperJS: https://swiperjs.com/demos",
+    "category": "vdplug",
+    "supports": {
+        "html": false
+    },
+    "textdomain": "vdplug",
+    "attributes": {
+        "hasNavigation": {
+            "type": "boolean",
+            "default": false
+        },
+        "hasPagination": {
+            "type": "boolean",
+            "default": false
+        },
+        "hasLoop": {
+            "type": "boolean",
+            "default": false
+        },
+        "maxDesktopItems": {
+            "type": "string",
+            "default": "3.5"
+        },
+        "spaceBetween": {
+            "type": "string",
+            "default": 20
+        }
+    },
+    "variations": [
+        {
+            "name": "verdure/vdslider-standard",
+            "description": "Slider element using SwiperJS",
+            "title": "Standard Slider",
+            "isDefault": true,
+            "isActive": ["className"],
+            "attributes": {
+                "className": "vdslider--standard"
+            },
+            "innerBlocks": [
+                [
+                    "verdure/vdslider-item",
+                    {},
+                    [
+                        [
+                            "core/paragraph",
+                            {
+                                "content": "Slide 1"
+                            }
+                        ]
+                    ]
+                ],
+                [
+                    "verdure/vdslider-item",
+                    {},
+                    [
+                        [
+                            "core/paragraph",
+                            {
+                                "content": "Slide 2"
+                            }
+                        ]
+                    ]
+                ]
+            ]
+        },
+        {
+            "name": "verdure/vdslider-hornetbox",
+            "title": "Hornetbox Slider",
+            "description": "A Hornetbox slider ....",
+            "isDefault": false,
+            "isActive": ["className"],
+            "attributes": {
+                "className": "vdslider--hornetbox"
+            },
+            "innerBlocks": [
+                [
+                    "verdure/vdslider-item",
+                    {},
+                    [
+                        [
+                            "verdure/box",
+                            {},
+                            [
+                                [
+                                    "core/paragraph",
+                                    {
+                                        "content": "Slide 1"
+                                    }
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                [
+                    "verdure/vdslider-item",
+                    {},
+                    [
+                        [
+                            "verdure/box",
+                            {},
+                            [
+                                [
+                                    "core/paragraph",
+                                    {
+                                        "content": "Slide 2"
+                                    }
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        }
+    ],
+    "example": {},
+    "editorScript": "file:index.js",
+    "editorStyle": "file:index.css",
+    "style": [
+        "file:view.css",
+        "file:style-view.css"
+    ],
+    "viewScript": "file:view.js"
+}

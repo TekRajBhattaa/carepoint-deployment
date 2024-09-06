@@ -1,0 +1,66 @@
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section__bg {
+    position: absolute;
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    opacity: var(--bgOpacity);
+}
+
+.section.theme-dark {
+    padding: 1em var(--pageSpace) 1em var(--pageSpace);
+}
+
+/* Wordpress container sizes and aligns */
+
+.section__inner {
+    position: relative;
+    z-index: 0;
+    margin: var(--sectionGap) auto !important;
+}
+
+.section__inner::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.section__inner > :last-child {
+    margin-bottom: 0;
+}
+
+/* CONTENT 875px */
+
+.section:where(:not(.alignfull)) .section__inner {
+    padding: 0 var(--pageSpace);
+}
+
+.section:where(:not(.alignwide):not(.alignfull)) > .section__inner {
+    max-width: var(--wp--style--global--content-size);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* WIDE 1325px */
+
+.section:where(.alignwide) .section__inner {
+    max-width: var(--wp--style--global--wide-size) !important;
+}
+
+/* With a Background */
+
+.section.has-background {
+    padding-top: 0.1px;
+    padding-bottom: 0.1px;
+}
+
+/* Section NARROW */
+
+.section.section--small .section__inner {
+    margin-top: var(--sectionNarrowGap) !important;
+    margin-bottom: var(--sectionNarrowGap) !important;
+}

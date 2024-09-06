@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 3,
+    "name": "verdure/gridcols",
+    "version": "1.0.0",
+    "title": "Grid Cols",
+    "description": "A container with dynamic columns.",
+    "icon": "smiley",
+    "category": "vdplug",
+    "keywords": [
+        "Section",
+        "Separator"
+    ],
+    "supports": {
+        "anchor": true
+    },
+    "attributes": {
+        "postLayout": {
+            "type": "string",
+            "default": "grid"
+        },
+        "gridMaxColumns": {
+            "type": "boolean",
+            "default": true
+        },
+        "gridLayoutGap": {
+            "type": "number",
+            "default": 10
+        },
+        "gridColumnCount": {
+            "type": "number",
+            "default": 4
+        },
+        "gridItemMinWidth": {
+            "type": "number",
+            "default": 200
+        },
+        "gridItemMaxWidth": {
+            "type": "number",
+            "default": 300
+        }
+    },
+    "example": {
+        "attributes": {
+            "gridLayoutGap": 20
+        },
+        "innerBlocks": [
+            {
+                "name": "verdure/box",
+                "innerBlocks": [
+                    {
+                        "name": "core/heading",
+                        "attributes": {
+                            "level": 2,
+                            "content": "My headline"
+                        }
+                    },
+                    {
+                        "name": "core/paragraph",
+                        "attributes": {
+                            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et eros eu felis."
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "verdure/box",
+                "innerBlocks": [
+                    {
+                        "name": "core/heading",
+                        "attributes": {
+                            "level": 2,
+                            "content": "My awesome headline"
+                        }
+                    },
+                    {
+                        "name": "core/paragraph",
+                        "attributes": {
+                            "content": "Praesent et eros eu felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "textdomain": "vdplug",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css"
+}

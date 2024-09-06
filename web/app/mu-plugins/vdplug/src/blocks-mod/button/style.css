@@ -1,0 +1,69 @@
+.wp-element-button,
+.wp-block-button__link {
+    transition: all 300ms ease-in-out;
+    padding: var(--gu1) 25px !important;
+
+    &:hover {
+        border-color: var(--wp--preset--color--light-orange) !important;
+        background-color: var(--wp--preset--color--light-orange) !important;
+        text-decoration: none;
+    }
+
+    &[disabled],
+    &:disabled {
+        opacity: 0.3;
+        transition: none;
+        pointer-events: none;
+    }
+
+    &:focus {
+        outline: 1px dotted var(--wp--preset--color--yellow);
+    }
+
+    &:active {
+        transform: scale(1.06);
+    }
+}
+
+/**
+ * Style: Outline
+ */
+
+.wp-block-button.is-style-outline > .wp-element-button,
+.wp-block-button.is-style-outline > .wp-block-button__link {
+
+    &:hover {
+        color: #fff !important;
+        border-color: var(--wp--preset--color--blue) !important;
+        background-color: var(--wp--preset--color--blue) !important;
+    }
+}
+
+/**
+ * Style: Outline 2
+ *
+ * There's a issue custom block styled can't be styled in theme.json
+ * https://github.com/WordPress/gutenberg/issues/49602
+ */
+
+.wp-block-button.is-style-outline2 > .wp-element-button,
+.wp-block-button.is-style-outline2 > .wp-block-button__link {
+    background: transparent !important;
+    border-color: var(--wp--preset--color--dark-pink) !important;
+    border-style: solid;
+    color: var(--wp--preset--color--dark-pink);
+
+    &:hover {
+        color: #fff;
+        border-color: var(--wp--preset--color--dark-pink) !important;
+        background-color: var(--wp--preset--color--dark-pink) !important;
+    }
+}
+
+/**
+ * Buttons Group
+ */
+
+.wp-block-buttons.is-layout-flex {
+    gap: var(--gu2);
+}

@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/accordion",
+    "version": "1.0",
+    "title": "Accordion",
+    "description": "Accordion block.",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "keywords": [
+        "Accordion",
+        "Content",
+        "Layout"
+    ],
+    "attributes": {
+        "title": {
+            "type": "string",
+            "source": "html",
+            "selector": ".accordion__title"
+        },
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": ".accordion__content"
+        }
+    },
+    "example": {
+        "attributes": {
+            "title": "My title"
+        },
+        "innerBlocks": [
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et eros eu felis."
+                }
+            }
+        ]
+    },
+    "textdomain": "vdplug",
+    "editorScript": "file:index.js",
+    "style": [
+        "file:style-index.css"
+    ],
+    "script": "file:frontend/index.js"
+}

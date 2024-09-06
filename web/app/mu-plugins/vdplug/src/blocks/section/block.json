@@ -1,0 +1,103 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/section",
+    "version": "1.0.0",
+    "title": "Section",
+    "description": "Add a section that separates content, and put any other block into it.",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "textdomain": "vdplug",
+    "keywords": [
+        "Section",
+        "Separator"
+    ],
+    "supports": {
+        "className": false,
+        "align": [
+            "left",
+            "right",
+            "center",
+            "wide",
+            "full"
+        ],
+        "color": {
+            "background": true,
+            "gradients": true,
+            "text": false,
+            "link": false
+        },
+        "alignWide": true,
+        "spacing": {}
+    },
+    "attributes": {
+        "mediaUrl": {
+            "type": "string"
+        },
+        "mediaId": {
+            "type": "number"
+        },
+        "blockAuth": {
+            "type": "string",
+            "default": ""
+        },
+        "blockRole": {
+            "type": "string",
+            "default": ""
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": ""
+        },
+        "hasParallax": {
+            "type": "string",
+            "default": "no"
+        },
+        "parallaxSpeed": {
+            "type": "number",
+            "default": 0.7
+        },
+        "bgOpacity": {
+            "type": "number",
+            "default": 1
+        }
+    },
+    "variations": [
+        {
+            "name": "Section Small",
+            "title": "Section Small",
+            "description": "This is a small section, without margin and only a small padding. It's used for Newsletter form",
+            "isActive": [
+                "className"
+            ],
+            "attributes": {
+                "align": "wide",
+                "className": "section--small",
+                "backgroundColor": "regal-blue"
+            }
+        }
+    ],
+    "example": {
+        "attributes": {
+            "backgroundColor": "#fff"
+        },
+        "innerBlocks": [
+            {
+                "name": "core/heading",
+                "attributes": {
+                    "level": 2,
+                    "content": "My awesome headline"
+                }
+            },
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et eros eu felis."
+                }
+            }
+        ]
+    },
+    "editorScript": "file:index.js",
+    "style": "file:style-index.css",
+    "script": "file:view.js"
+}

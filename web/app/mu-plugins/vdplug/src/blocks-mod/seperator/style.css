@@ -1,0 +1,9 @@
+.wp-block-separator {
+    height: 1px;
+    width: 100% !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 5.69%, #009fe3 47.44%, rgba(0, 0, 0, 0) 92.81%);
+}
+
+.is-style-blueline {
+    background: var(--wp--preset--color--blue);
+}

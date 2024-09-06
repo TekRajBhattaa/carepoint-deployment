@@ -1,0 +1,23 @@
+.header-main {
+    background-color: var(--wp--preset--color--pure-white);
+}
+
+.header-main__inner {
+    display: flex;
+    gap: var(--gu2);
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--wp--style--global--wide-size);
+    margin: auto;
+    @media (--vp-medium) {
+        padding: var(--gu2);
+    }
+}
+
+.header-main__area {
+    @media (--vp-medium) {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+}

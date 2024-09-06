@@ -1,0 +1,72 @@
+.wp-block-quote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 0;
+    padding: calc(58px + var(--gu2)) 0 0;
+    @media (--vp-small) {
+        padding: 0 0 0 calc(58px + var(--gu3));
+    }
+    @media (--vp-medium) {
+        padding: 0 0 0 114px;
+    }
+    @media (--vp-large) {
+        padding: 0;
+        padding-left: 80px;
+    }
+}
+
+.wp-block-quote::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 58px;
+    margin: 0;
+    content: url(./quote.svg);
+    flex-shrink: 0;
+    @media (--vp-medium) {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.wp-block-quote::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    margin: 0;
+    content: url(./quote.svg) !important;
+    flex-shrink: 0;
+    transform: rotate(181deg);
+    @media (--vp-medium) {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.wp-block-quote p {
+    font-size: 28px;
+    margin: 0;
+    @media (--vp-small) {
+        margin: 17px 0 0;
+        font-size: 34px;
+    }
+    @media (--vp-medium) {
+        font-size: 25px;
+    }
+}
+
+.wp-block-quote cite {
+    color: var(--wp--preset--color--white);
+    font-size: 18px;
+    margin-top: var(--gu3);
+    text-align: right;
+    margin-right: 90px;
+}
+
+.wp-block-quote cite::before {
+    content: "- ";
+}

@@ -1,0 +1,92 @@
+{
+  "name": "carepoint",
+  "private": true,
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <a href=\"https://roots.io/bedrock/\">     <img alt=\"Bedrock\" src=\"https://cdn.roots.io/app/uploads/logo-bedrock.svg\" height=\"100\">   </a> </p>",
+  "config": {
+    "theme": "vdclassic"
+  },
+  "scripts": {
+    "build:theme": "wp-scripts build --config-name vdclassic",
+    "build:plugin": "wp-scripts build --config-name vdplug",
+    "build": "npm run icons && wp-scripts build",
+    "start": "wp-scripts start",
+    "icons": "node ./icon-builder.mjs --theme=${npm_package_config_theme}",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\"",
+    "lint:css": "wp-scripts lint-style \"./web/app/mu-plugins/vdplug/**/*.css\"  \"./web/app/themes/${npm_package_config_theme}/**/*.css\"",
+    "lint:css:fix": "npm run lint:css -- --fix",
+    "lint:js": "wp-scripts lint-js \"./web/app/themes/${npm_package_config_theme}\" \"./web/app/mu-plugins/vdplug\"",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "web/app/mu-plugins/vdplug/**/*.js": [
+      "eslint"
+    ],
+    "web/app/mu-plugins/vdplug/**/*.css": [
+      "stylelint"
+    ],
+    "web/app/mu-plugins/vdplug/**/*.php": [
+      "ddev exec phpcs"
+    ],
+    "web/app/themes/vdclassic/**/*.js": [
+      "eslint"
+    ],
+    "web/app/themes/vdclassic/**/*.css": [
+      "stylelint"
+    ],
+    "web/app/themes/vdclassic/**/*.php": [
+      "ddev exec phpcs"
+    ]
+  },
+  "engines": {
+    "node": ">=20.10.0",
+    "npm": ">=10.2.3"
+  },
+  "main": "index.js",
+  "author": "Verdure",
+  "license": "ISC",
+  "devDependencies": {
+    "@csstools/postcss-global-data": "^2.1.1",
+    "@wordpress/eslint-plugin": "^17.13.0",
+    "@wordpress/scripts": "^26.19.0",
+    "@wordpress/stylelint-config": "^21.40.0",
+    "autoprefixer": "^10.4.19",
+    "copy-webpack-plugin": "^11.0.0",
+    "cssnano": "^6.1.2",
+    "dotenv": "^16.4.5",
+    "fast-glob": "^3.3.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "path": "^0.12.7",
+    "postcss": "^8.4.38",
+    "postcss-custom-media": "^10.0.6",
+    "postcss-media-minmax": "^5.0.0",
+    "postcss-nested": "^6.0.1",
+    "svg-sprite": "^2.0.4",
+    "typescript": "^5.4.5",
+    "yargs": "^17.7.2"
+  },
+  "dependencies": {
+    "@wordpress/components": "^25.16.0",
+    "@wordpress/date": "^4.57.0",
+    "@wordpress/hooks": "^3.57.0",
+    "@wordpress/icons": "^9.48.0",
+    "classnames": "^2.5.1",
+    "headroom.js": "^0.12.0",
+    "lodash": "^4.17.21",
+    "swiper": "^11.1.1"
+  }
+}

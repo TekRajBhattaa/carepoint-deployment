@@ -1,0 +1,39 @@
+dialog {
+    position: fixed;
+    z-index: 2000;
+    max-width: 1000px;
+    width: 90%;
+    padding: 0;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
+    background-color: var(--wp--preset--color--pure-white);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    /* backdrop-filter: blur(10px); */
+}
+
+.dialog__close {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    top: -24px;
+    right: 0;
+    cursor: pointer;
+
+    &:hover svg {
+        color: var(--wp--preset--color--blue);
+    }
+}
+
+.dialog__close svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    color: #fff;
+}

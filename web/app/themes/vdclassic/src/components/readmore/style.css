@@ -1,0 +1,46 @@
+/**
+ * START READMORE
+ */
+@keyframes goright {
+
+    from {
+        right: -10px;
+    }
+
+    to {
+        right: -15px;
+    }
+}
+
+.is-style-readmore,
+.readmore {
+    margin-top: var(--gu1);
+}
+
+.is-style-readmore > a,
+.readmore > a {
+    position: relative;
+    color: var(--wp--preset--color--blaze-orange);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.is-style-readmore > a::after,
+.readmore > a::after {
+    position: absolute;
+    content: url(./arrow-link.svg);
+    top: -0.05em;
+    right: -10px;
+}
+
+.is-style-readmore > a:hover,
+.readmore > a:hover {
+    text-decoration: underline;
+}
+
+.is-style-readmore > a:hover::after,
+.readmore > a:hover::after {
+    right: -15px;
+    animation: goright 1s ease-in alternate-reverse infinite;
+}

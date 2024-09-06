@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/featured",
+    "version": "1.0.0",
+    "title": "Featured Block",
+    "description": "Add a featured block.",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "keywords": [
+        "Section",
+        "Separator"
+    ],
+    "supports": {
+        "anchor": true
+    },
+    "styles": [
+        {
+            "name": "reverse",
+            "label": "Reverse",
+            "isDefault": false
+        }
+    ],
+    "example": {},
+    "textdomain": "vdplug",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

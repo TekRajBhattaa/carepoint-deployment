@@ -1,0 +1,9 @@
+{
+    "name": "verdure/vdclassic",
+    "description": "WordPress Verdure starter theme for doing stuff",
+    "license": "GPL-2.0+",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "~2.0"
+    }
+}

@@ -1,0 +1,57 @@
+/*
+ * Style for Banners
+ */
+
+.is-style-banner {
+    border: 1px solid var(--wp--preset--color--blue);
+    border-radius: 10px;
+}
+
+/*
+ * Cover Block Variation used for Header
+ */
+
+.hero {
+    width: 100%;
+    padding: 0;
+}
+
+.hero .wp-block-cover__inner-container {
+    max-width: var(--wp--style--global--wide-size);
+    padding: var(--sectionGap) var(--pageSpace);
+    margin: auto;
+}
+
+.hero .wp-block-cover__inner-container h1,
+.hero .wp-block-cover__inner-container h2,
+.hero .wp-block-cover__inner-container h3,
+.hero .wp-block-cover__inner-container h4,
+.hero .wp-block-cover__inner-container h5,
+.hero .wp-block-cover__inner-container h6,
+.hero .wp-block-cover__inner-container p {
+    color: #fff !important;
+}
+
+.hero :where(.wp-block-columns),
+.hero .wp-block-image {
+    margin-bottom: 0;
+}
+
+/**
+ * Frank Version :-|
+ */
+
+.single-post .hero {
+    min-height: auto !important;
+    aspect-ratio: 4 / 3;
+    @media (--vp-small) {
+        aspect-ratio: 16 / 9;
+    }
+    @media (--vp-medium) {
+        aspect-ratio: 4 / 1;
+    }
+}
+
+.is-style-banner-without-border {
+    border-radius: 10px;
+}

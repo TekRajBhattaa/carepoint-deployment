@@ -1,0 +1,120 @@
+.header {
+    display: block;
+    max-width: var(--pageWidth);
+}
+
+.header__inner {
+    display: flex;
+    height: 120px;
+    align-items: flex-end;
+}
+
+.header__logo {
+    grid-area: logo;
+}
+
+.header__logo > a {
+    display: block;
+    max-width: 200px;
+    @media (--vp-small) {
+        max-width: 100%;
+    }
+}
+
+.header__logo img {
+    display: block;
+}
+
+.header__lang {
+    display: flex;
+    align-items: center;
+}
+
+.header__toggle {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    @media (--vp-medium) {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.header__toggle:hover {
+    @media (--vp-medium) {
+        color: #fff;
+    }
+}
+
+.header__toggle--menu {
+    @media (--vp-medium) {
+        display: none;
+    }
+}
+
+.header__menus {
+    position: relative;
+    display: none;
+    background-color: var(--wp--preset--color--pure-white);
+    border-bottom: 2px solid var(--wp--preset--color--blue);
+    @media (--vp-medium) {
+        display: contents;
+    }
+}
+
+.header__menus--open {
+    @media (--vp-small-max) {
+        display: block;
+        width: 100vw;
+        margin-left: calc(-1 * var(--pageSpace));
+        margin-right: calc(-1 * var(--pageSpace));
+    }
+}
+
+.header__menus--open .header__topnav,
+.header__menus--open .header__primenav {
+    @media (--vp-small-max) {
+        padding-left: var(--pageSpace);
+        padding-right: var(--pageSpace);
+    }
+}
+
+.header__topnav {
+    @media (--vp-medium) {
+        display: flex;
+        align-items: center;
+        gap: var(--gu2);
+        justify-self: flex-end;
+        min-height: 50px;
+    }
+}
+
+.header__logo--mobile {
+    padding: 15px 0;
+    margin-right: auto;
+    @media (--vp-medium) {
+        display: none;
+    }
+}
+
+.header__logo--desktop {
+    display: none;
+    @media (--vp-medium) {
+        display: block;
+    }
+}
+
+.header__partner--mobile {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    @media (--vp-medium) {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+.counter-item {
+    background-color: var(--wp--preset--color--regal-blue);
+    border: 1px solid var(--wp--preset--color--blue);
+    border-radius: 4px;
+    padding: var(--gu2);
+    --fontCounterLarge: clamp(4rem, -0.875rem + 5.333vw, 7rem);
+}
+
+
+.counter-item__count-to,
+.counter-item__count-prefix,
+.counter-item__count-suffix {
+    display: inline-block;
+}
+
+.counter-item__value {
+    font-size: var(--fontCounterLarge);
+    color: var(--wp--preset--color--blue);
+    font-weight: 900;
+}
+
+.counter-item__count-title {
+    margin: 0;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}

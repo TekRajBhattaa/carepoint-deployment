@@ -1,0 +1,67 @@
+.hamburger {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--wp--preset--color--blue);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:focus {
+        outline: 1px dotted #ccc;
+    }
+}
+
+.hamburger__inner {
+    position: absolute;
+    z-index: var(--indexPrimenav);
+    display: flex;
+    width: 25px;
+    height: 18px;
+    top: 16px;
+    left: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.hamburger .line {
+    display: block;
+    height: 2px;
+    width: 25px;
+    border-radius: var(--borderRadiusSmall);
+    background: #fff;
+}
+
+.hamburger .line1 {
+    width: 25px;
+    transform-origin: 4px 4px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.hamburger .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hamburger .line3 {
+    width: 25px;
+    transform-origin: 2px -3px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.hamburger[aria-expanded="true"] .line1 {
+    transform: rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .line2 {
+    transform: scaleY(0);
+}
+
+.hamburger[aria-expanded="true"] .line3 {
+    transform: rotate(-45deg);
+}
+
+.hamburger[aria-expanded="true"] {
+    background: var(--wp--preset--color--blue);
+}

@@ -1,0 +1,24 @@
+.pageteaser {
+    margin-top: var(--blockGap);
+}
+
+.pageteaser__footer {
+    display: flex;
+    margin-top: var(--gu3);
+    justify-content: center;
+}
+
+.pageteaser__footer .loadmore:disabled {
+    opacity: 0.5;
+}
+
+.pageteaser:not([data-block]).is-style-scroll-anim .teaser {
+
+    /* hide if not inside editor */
+    opacity: 0;
+}
+
+.pageteaser.is-style-scroll-anim .teaser.in-viewport {
+    opacity: 1;
+    animation: fade-bottom 1s ease-in;
+}

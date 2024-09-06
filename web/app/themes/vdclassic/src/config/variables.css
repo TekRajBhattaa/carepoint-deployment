@@ -1,0 +1,56 @@
+:root {
+
+    --pageWidth: 2560px;
+
+    /* === HORNET COLORS ARE IN theme.json === */
+
+    --gBlueGreen: linear-gradient(45deg, var(--col020), var(--col030));
+
+    /* === SIZES === */
+
+    /*
+     * Heading
+     * https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/
+     */
+    --h1: clamp(2.44rem, 1.36vw + 2.17rem, 3.26rem);
+    --h2: clamp(1.95rem, 0.82vw + 1.79rem, 2.44rem);
+    --h3: clamp(1.56rem, 0.45vw + 1.47rem, 1.83rem);
+    --h4: clamp(1.25rem, 0.21vw + 1.21rem, 1.38rem);
+    --h5: clamp(1rem, 0.05vw + 0.99rem, 1.03rem);
+    --h6: clamp(0.8rem, -0.04vw + 0.81rem, 0.77rem);
+
+    /* Spacer */
+    --gu1: 10px;
+    --gu2: 20px;
+    --gu3: 30px;
+    --gu4: 40px;
+    --gu5: 60px;
+
+    /* Gap / Space between blocks */
+    --pageSpace: 12px;
+    --sectionGap: 30px;
+    --sectionNarrowGap: 20px;
+    --gridGap: clamp(30px, 4vw, 50px);
+
+    /* Layer index */
+    --indexContent: 100;
+    --indexPrimenav: 200;
+    --indexPopover: 300;
+    --indexModal: 500;
+
+    /* === RESPONSIVE VARIABLES === */
+
+    /* Dynamic Variables for Tablet */
+    @media (--vp-small) {
+        --pageSpace: 24px;
+        --sectionGap: 30px;
+        --sectionNarrowGap: 20px;
+    }
+
+    /* Dynamic Variables for Desktop */
+    @media (--vp-large) {
+        --sectionGap: 50px;
+        --sectionNarrowGap: 30px;
+        --containerWidth: 1200px;
+    }
+}

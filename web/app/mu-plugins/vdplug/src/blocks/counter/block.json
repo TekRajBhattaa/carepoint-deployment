@@ -1,0 +1,50 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/counter",
+    "version": "1.0.0",
+    "title": "Counter",
+    "description": "Block with a counter",
+    "category": "widgets",
+    "icon": "chart-bar",
+    "keywords": [
+        "Counter"
+    ],
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "gridGap": {
+            "type": "number",
+            "default": 30
+        },
+        "minWidth": {
+            "type": "number",
+            "default": 250
+        }
+    },
+    "example": {
+        "viewportWidth": 900,
+        "innerBlocks": [
+            {
+                "name": "verdure/counter-item",
+                "attributes": {
+                    "countTo": 100,
+                    "countSuffix": "%",
+                    "countTitle": "Features"
+                }
+            },
+            {
+                "name": "verdure/counter-item",
+                "attributes": {
+                    "countTo": 46,
+                    "countTitle": "Peoples"
+                }
+            }
+        ]
+    },
+    "textdomain": "vdplug",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css",
+    "script": "file:./view.js"
+}

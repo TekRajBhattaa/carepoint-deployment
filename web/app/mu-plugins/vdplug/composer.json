@@ -1,0 +1,9 @@
+{
+    "name": "verdure/vdplug",
+    "description": "WordPress Verdure starter plugin for doing beautiful, creative work!",
+    "license": "GPL-2.0+",
+    "type": "wordpress-muplugin",
+    "require": {
+        "composer/installers": "~2.0"
+    }
+}

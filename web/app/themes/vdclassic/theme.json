@@ -1,0 +1,337 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "appearanceTools": false,
+        "custom": {
+            "typo": {
+                "rootSize": "18px",
+                "lineHeight": 1.5,
+                "adaptiveRatio": 0.8,
+                "scale": 1.333
+            },
+            "spacing": {
+                "small": "max(1.25rem, 5vw)",
+                "medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
+                "large": "clamp(4rem, 10vw, 8rem)"
+            }
+        },
+        "spacing": {
+            "units": [
+                "%",
+                "px",
+                "em",
+                "rem"
+            ],
+            "customSpacingSize": false,
+            "spacingSizes": [
+                {
+                    "name": "Step 1",
+                    "size": "clamp(20px, 3vw, 30px)",
+                    "slug": "10"
+                },
+                {
+                    "name": "Step 2",
+                    "size": "clamp(30px, 4vw, 50px)",
+                    "slug": "20"
+                },
+                {
+                    "name": "Step 3",
+                    "size": "clamp(50px, 4vw, 70px)",
+                    "slug": "30"
+                },
+                {
+                    "name": "Step 4",
+                    "size": "clamp(70px, 4vw, 100px)",
+                    "slug": "40"
+                }
+            ]
+        },
+        "color": {
+            "text": false,
+            "background": false,
+            "custom": false,
+            "customDuotone": false,
+            "customGradient": false,
+            "defaultDuotone": false,
+            "defaultGradients": false,
+            "defaultPalette": false,
+            "duotone": [],
+            "palette": [
+                {
+                    "name": "Pure White",
+                    "slug": "pure-white",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "name": "Blue Whale",
+                    "slug": "blue-whale",
+                    "color": "#082c3e"
+                },
+                {
+                    "name": "Hornet Green",
+                    "slug": "hornet-green",
+                    "color": "#cadd37"
+                },
+                {
+                    "name": "Catskill White",
+                    "slug": "catskill-white",
+                    "color": "#E7EEF3"
+                },
+                {
+                    "name": "Regal Blue",
+                    "slug": "regal-blue",
+                    "color":  "#094462"
+                },
+                {
+                    "name": "Blue",
+                    "slug": "blue",
+                    "color": "#009fe3"
+                },
+                {
+                    "name": "Magenta",
+                    "slug": "magenta",
+                    "color": "#eb5d0b"
+                },
+                {
+                    "name": "Blaze Orange",
+                    "slug": "blaze-orange",
+                    "color": "#eb5d0b"
+                },
+                {
+                    "name": "Light Orange",
+                    "slug": "light-orange",
+                    "color": "#fbba10"
+                },
+                {
+                    "name": "Yellow",
+                    "slug": "yellow",
+                    "color": "#fbba05"
+                },
+                {
+                    "name": "Dark Pink",
+                    "slug": "dark-pink",
+                    "color": "#e50069"
+                },
+                {
+                    "name": "Vanadyl Blue",
+                    "slug": "vanadyl-blue",
+                    "color": "#009fe2"
+                },
+                {
+                    "name": "Dark Denim Blue",
+                    "slug": "dark-denim-blue",
+                    "color": "#003952"
+                }
+            ],
+            "gradients": [
+                {
+                    "name": "Gradient 1",
+                    "slug": "gradient-1",
+                    "gradient": "linear-gradient(0deg, hsla(200, 77%, 14%, 1) 0%, hsla(198, 100%, 16%, 1) 100%)"
+                },
+                {
+                    "name": "Gradient 2",
+                    "slug": "gradient-2",
+                    "gradient": "linear-gradient(0deg, hsla(200, 77%, 14%, 1) 0%, hsla(200, 83%, 21%, 1) 100%)"
+                },
+                {
+                    "name": "Gradient 3",
+                    "slug": "gradient-3",
+                    "gradient": "linear-gradient(0deg, hsla(198, 100%, 45%, 1) 0%, hsla(200, 83%, 21%, 1) 100%)"
+                }
+            ]
+        },
+        "typography": {
+            "dropCap": false,
+            "lineHeight": false,
+            "letterSpacing": false,
+            "textDecoration": false,
+            "textTransform": false,
+            "fontStyle": false,
+            "fontWeight": false,
+            "fontFamilies": []
+        },
+        "layout": {
+            "contentSize": "940px",
+            "wideSize": "1320px"
+        },
+        "blocks": {
+            "core/spacer": {
+                "appearanceTools": false,
+                "spacing": {
+                    "units": [
+                        "rem"
+                    ]
+                }
+            },
+            "core/heading": {
+                "typography": {
+                    "fontSizes": [
+                        {
+                            "slug": "h1",
+                            "size": "var(--h1)"
+                        },
+                        {
+                            "slug": "h2",
+                            "size": "var(--h2)"
+                        },
+                        {
+                            "slug": "h3",
+                            "size": "var(--h3)"
+                        },
+                        {
+                            "slug": "h4",
+                            "size": "var(--h4)"
+                        },
+                        {
+                            "slug": "h5",
+                            "size": "var(--h5)"
+                        },
+                        {
+                            "slug": "h6",
+                            "size": "var(--h6)"
+                        }
+                    ]
+                }
+            },
+            "core/paragraph": {
+                "typography": {
+                    "fontSizes": []
+                },
+                "spacing": {
+                    "margin": true
+                }
+            },
+            "core/button": {
+                "border": {
+                    "radius": false
+                },
+                "spacing": {}
+            },
+            "verdure/section": {
+                "color": {
+                    "custom": false,
+                    "text": false,
+                    "background": true,
+                    "customDuotone": false,
+                    "customGradient": false,
+                    "defaultDuotone": false,
+                    "defaultGradients": false,
+                    "defaultPalette": false,
+                    "duotone": [],
+                    "palette": [
+                        {
+                            "name": "Midnight Blue",
+                            "slug": "pure-white",
+                            "color": "#092231"
+                        },
+                        {
+                            "name": "Blue Whale",
+                            "slug": "blue-whale",
+                            "color": "#082c3e"
+                        }
+                    ]
+                },
+                "background": {
+                    "backgroundImage": true
+                }
+            }
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--pure-white, #fff)",
+            "text": "var(--wp--preset--color--white, #fff)"
+        },
+        "spacing": {
+            "blockGap": "1.5rem"
+        },
+        "typography": {
+            "fontFamily": "Hornet",
+            "fontWeight": "300",
+            "lineHeight": "var(--wp--custom--typo--line-height)",
+            "fontSize": "var(--wp--custom--typo--root-size)"
+        },
+        "blocks": {
+            "core/button": {
+                "border": {
+                    "radius": "5px",
+                    "width": "1px",
+                    "style": "solid",
+                    "color": "var(--wp--preset--color--blaze-orange)"
+                },
+                "typography": {
+                    "fontFamily": "inherit",
+                    "fontWeight": "600",
+                    "fontSize": "var(--wp--custom--typo--root-size)"
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--white)",
+                    "background": "var(--wp--preset--color--blaze-orange)"
+                },
+                "spacing": {
+                    "padding": {
+                        "top": "var(--gu1)",
+                        "right": "var(--gu2)",
+                        "bottom": "var(--gu1)",
+                        "left": "var(--gu2)"
+                    }
+                },
+                "variations": {
+                    "outline": {
+                        "border": {
+                            "width": "1px",
+                            "color": "var(--wp--preset--color--blue)"
+                        },
+                        "color": {
+                            "text": "var(--wp--preset--color--blue)"
+                        }
+                    }
+                }
+            },
+            "core/paragraph": {
+                "spacing": {
+                    "blockGap": "var(--gu2)"
+                }
+            }
+        },
+        "elements": {
+            "h1": {
+                "typography": {
+                    "fontSize": "var(--h1)"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontSize": "var(--h2)"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontSize": "var(--h3)"
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontSize": "var(--h4)"
+                }
+            },
+            "h5": {
+                "typography": {
+                    "fontSize": "var(--h5)"
+                }
+            },
+            "h6": {
+                "typography": {
+                    "fontSize": "var(--h6)"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--foreground)"
+                }
+            }
+        }
+    }
+}

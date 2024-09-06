@@ -1,0 +1,72 @@
+/* +++ Default unordered list style +++ */
+
+section ol:not([class]),
+section ul:not([class]),
+.is-style-check {
+    list-style: none;
+    margin: var(--gu2) 0 var(--gu2) 0;
+    padding-left: var(--gu4);
+
+    & li {
+        position: relative;
+        margin-bottom: 14px;
+    }
+
+    & li::before {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10px;
+        width: 10px;
+        top: 8px;
+        left: -32px;
+        border-radius: 50%;
+        background: var(--wp--preset--color--blue);
+        vertical-align: middle;
+        content: "";
+    }
+
+    & li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* +++ Ordered List +++ */
+
+section ol {
+
+    & li {
+        counter-increment: olcount;
+    }
+
+    & li::before {
+        height: 26px;
+        width: 26px;
+        top: 0;
+        left: -40px;
+        content: counter(olcount);
+        font-weight: 400;
+    }
+}
+
+/* +++ is-check list style variation +++ */
+
+.is-style-check {
+
+    & li::before {
+        height: 26px;
+        width: 26px;
+        top: 0;
+        left: -40px;
+        background: var(--wp--preset--color--blue);
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        /* stylelint-disable */
+        background-image: url('data:image/svg+xml, <svg width="14" height="12" fill="none" version="1.1" viewBox="0 0 14 12" xmlns="http://www.w3.org/2000/svg"> \
+            <path d="m12.883 0.79688a1 1 0 0 0-0.70703 0.29297l-7.6973 7.6992-2.6543-2.6562a1 1 0 0 0-1.4141 0 1 1 0 0 0 0 1.4141l3.3613 3.3633a1.0001 1.0001 0 0 0 1.4141 0l8.4043-8.4043a1 1 0 0 0 0-1.416 1 1 0 0 0-0.70703-0.29297z" fill="#fff"/>\
+        </svg>');
+        /* stylelint-enable */
+    }
+}

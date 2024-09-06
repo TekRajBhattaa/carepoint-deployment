@@ -1,0 +1,29 @@
+.wpml-switch {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-width: 80px;
+    justify-content: flex-end;
+}
+
+.wpml-switch select {
+    color: #fff;
+    background-color: var(--wp--preset--color--catskill-white);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.wpml-switch option {
+    color: #fff;
+    background-color: var(--wp--preset--color--catskill-white);
+    border: none;
+}
+
+.wpml-switch .icon {
+    width: 24px;
+    height: 24px;
+}

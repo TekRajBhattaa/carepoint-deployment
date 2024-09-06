@@ -1,0 +1,55 @@
+.header-top {
+    background-color: var(--wp--preset--color--catskill-white);
+}
+
+.header-top__inner {
+    display: flex;
+    align-items: center;
+    max-width: var(--wp--style--global--wide-size);
+    margin: auto;
+    padding: 0 var(--gu2);
+    gap: 25px;
+    @media (--vp-medium) {
+        justify-content: flex-end;
+    }
+}
+
+.topnav {
+    display: none;
+    font-size: 16px;
+    @media (--vp-medium) {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: var(--gu2);
+        flex-flow: row;
+    }
+}
+
+.topnav a {
+    display: block;
+    line-height: 28px;
+    text-decoration: none;
+    color: #15354d;
+
+    &:hover {
+        color: var(--col090);
+        text-decoration: none;
+    }
+}
+
+/*
+ * Partner link
+ * THIS LINK IS USED HARDCODED AT ANOTER PLACE!!! :/
+ */
+
+.partner > a {
+    display: flex;
+    border: 2px solid var(--wp--preset--color--blue);
+    border-radius: 5px;
+    padding: 0 10px 0 30px;
+    background: url(./lock.svg) no-repeat;
+    background-position: 10px 5px;
+    text-decoration: none;
+}

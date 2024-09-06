@@ -1,0 +1,79 @@
+/**
+ * Idea taken from:
+ * https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+ */
+
+.gridcols {
+
+    /**
+     * User input values.
+     */
+    --gridLayoutGap: 10px;
+    --gridColumnCount: 4;
+    --gridItemMinWidth: 100px;
+    --gridItemMaxWidth: 150px;
+
+    /**
+     * Calculated values.
+     */
+    --gapCount: calc(var(--gridColumnCount) - 1);
+    --totalGapWidth: calc(var(--gapCount) * var(--gridLayoutGap));
+
+}
+
+.gridcols__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--gridItemMinWidth), var(--gridItemMaxWidth)), 1fr));
+    grid-gap: var(--gridLayoutGap);
+}
+
+/**
+ * === MODIFIER ===
+ */
+
+.gridcols--slides {
+    position: relative;
+}
+
+.gridcols--slides .gridcols__inner {
+    --navHeight: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    grid-template-columns: repeat(auto-fill, minmax(var(--gridItemMinWidth), 1fr));
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    padding-bottom: var(--gu2);
+}
+
+.gridcols--slides::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 2px 0 0 2px;
+    background: linear-gradient(to right, transparent, hsl(195 84% 47% / 50%));
+}
+
+.gridcols--slides .gridcols__inner::-webkit-scrollbar {
+    width: 10px;
+    height: var(--navHeight);
+}
+
+.gridcols--slides .gridcols__inner::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: var(--navHeight);
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 80% / 25%), inset -2px -2px 2px hsl(0deg 0% 0% / 25%);
+}
+
+.gridcols--slides .gridcols__inner::-webkit-scrollbar-track {
+    border-radius: var(--navHeight);
+    background: hsla(0deg 0% 0% / 0%);
+}
+
+.gridcols--slides .gridcols__inner > * {
+    scroll-snap-align: start;
+}

@@ -1,0 +1,4 @@
+.counter-item__count-to {
+    color: var(--col090);
+    -webkit-text-stroke: 2px var(--col090);
+}

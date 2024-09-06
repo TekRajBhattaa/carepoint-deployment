@@ -1,0 +1,43 @@
+.headroom {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    will-change: transform;
+    z-index: var(--indexPrimenav);
+}
+
+.headroom--top {
+    position: absolute !important;
+    transition: none;
+}
+
+.headroom--pinned {
+    position: fixed;
+    transform: translateY(0%);
+    transition: transform 400ms ease-in-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+    transition: transform 400ms ease-in;
+}
+
+.headroom--pinned.headroom--not-top {
+    @media (--vp-medium-max) {
+        transform: translateY(0%);
+    }
+}
+
+.headroom--unpinned .primenav__flyout {
+    height: 0 !important;
+    padding: 0;
+}
+
+#wpadminbar ~ .site .headroom:not(.headroom--top),
+#wpadminbar ~ .site {
+    top: 45px;
+    @media (--vp-small) {
+        top: 32px;
+    }
+}

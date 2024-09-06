@@ -1,0 +1,73 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 3,
+    "name": "verdure/related",
+    "version": "1.0.0",
+    "title": "Related Content",
+    "description": "List of related content teasers. If based on page categories active, the teasers inside editor only examples.",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "textdomain": "vdplug",
+    "keywords": [
+        "Teaser",
+        "Related content"
+    ],
+    "supports": {
+        "anchor": true
+    },
+    "usesContext": [
+        "postId"
+    ],
+    "render": "file:./render-template.php",
+    "attributes": {
+        "categories": {
+            "type": "array",
+            "items": {
+                "type": "object"
+            }
+        },
+        "byPageCategories": {
+            "type": "boolean",
+            "default": false
+        },
+        "postsToShow": {
+            "type": "number",
+            "default": 4
+        },
+        "excerptLength": {
+            "type": "number",
+            "default": 55
+        },
+        "displayFeaturedImage": {
+            "type": "boolean",
+            "default": true
+        },
+        "featuredImageSizeSlug": {
+            "type": "string",
+            "default": "teaser_16_9"
+        },
+        "featuredImageSizeWidth": {
+            "type": "number",
+            "default": null
+        },
+        "featuredImageSizeHeight": {
+            "type": "number",
+            "default": null
+        },
+        "columns": {
+            "type": "number",
+            "default": 4
+        },
+        "order": {
+            "type": "string",
+            "default": "desc"
+        },
+        "orderBy": {
+            "type": "string",
+            "default": "date"
+        }
+    },
+    "editorScript": "file:index.js",
+    "viewScript": "file:view.js",
+    "style": "file:style-index.css"
+}

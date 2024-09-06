@@ -1,0 +1,9 @@
+.related {
+    margin-top: var(--blockGap);
+}
+
+.related__footer {
+    display: flex;
+    margin-top: var(--gu2);
+    justify-content: center;
+}

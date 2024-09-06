@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/box",
+    "version": "1.0.0",
+    "title": "Box",
+    "description": "Add a Box Block.",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "keywords": [
+        "Section",
+        "Separator"
+    ],
+    "supports": {
+        "anchor": true
+    },
+    "example": {
+        "attributes": {
+            "textColor": "white",
+            "backgroundColor": "red-purple"
+        },
+        "innerBlocks": [
+            {
+                "name": "core/heading",
+                "attributes": {
+                    "level": 3,
+                    "content": "Box heading"
+                }
+            },
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et eros eu felis."
+                }
+            }
+        ]
+    },
+    "styles": [
+        {
+            "name": "no-border",
+            "label": "Without border",
+            "isDefault": false
+        }
+    ],
+    "textdomain": "vdplug",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css"
+}

@@ -1,0 +1,9 @@
+.bloginfo {
+    display: block;
+    text-align: center;
+}
+
+.bloginfo__category,
+.bloginfo__author {
+    color: var(--wp--preset--color--blue);
+}

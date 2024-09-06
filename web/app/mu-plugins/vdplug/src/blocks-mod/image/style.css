@@ -1,0 +1,9 @@
+.wp-block-image {
+    display: inline-block;
+}
+
+.wp-block-image figcaption {
+    font-size: var(--wp--preset--font-size--small);
+    text-align: center;
+    color: #fff;
+}

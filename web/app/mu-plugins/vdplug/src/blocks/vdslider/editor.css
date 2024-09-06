@@ -1,0 +1,48 @@
+.vdslider {
+    position: relative;
+    height: auto;
+    --slidesPerView: 1;
+}
+
+.vdslider__items {
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+
+    /* We don't want vertical scrolling */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-scroll-snap-type: mandatory;
+    /* stylelint-disable-next-line */
+    -ms-scroll-snap-points-y: snapInterval(0%, 100%);
+}
+
+.vdslider__items > * {
+    width: calc(100% / var(--slidesPerView));
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: auto; /* equal height of slides */
+    scroll-snap-align: start;
+    outline: 1px dotted hsl(16, 100%, 50%, 0.3);
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block::after {
+    content: none;
+}
+
+/* ++++++++ V A R I A N T S ++++++++ */
+
+.vdslider--benefit .vdslider__items {
+    gap: var(--gu1);
+}
+
+.vdslider--benefit {
+    --slidesPerView: 5;
+}
+
+.wp-admin .vdslider--hornetbox {
+    visibility: visible !important;
+}

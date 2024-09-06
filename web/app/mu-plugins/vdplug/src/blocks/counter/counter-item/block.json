@@ -1,0 +1,50 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/counter-item",
+    "version": "1.0.0",
+    "title": "Counter Item",
+    "category": "widgets",
+    "description": "Counter Item",
+    "textdomain": "vdplug",
+    "icon": "buddicons-topics",
+    "keywords": [
+        "Counter"
+    ],
+    "supports": {
+        "html": false
+    },
+    "parent": [
+        "verdure/counter"
+    ],
+    "attributes": {
+        "countTo": {
+            "type": "number",
+            "default": 10
+        },
+        "countPrefix": {
+            "type": "string",
+            "default": ""
+        },
+        "countSuffix": {
+            "type": "string",
+            "default": ""
+        },
+        "countTitle": {
+            "type": "string",
+            "source": "text",
+            "selector": ".counter-item__count-title",
+            "default": ""
+        }
+    },
+    "example": {
+        "attributes": {
+            "countTo": "100",
+            "countTitle": "Hello World",
+            "countSuffix": "%"
+        }
+    },
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

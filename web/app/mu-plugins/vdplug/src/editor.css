@@ -1,0 +1,45 @@
+/* stylelint-disable selector-class-pattern */
+
+
+/* Disable hover effect inside editor for vidteaser */
+
+.block-editor-block-list__block .wp-block-cover__inner-container {
+    bottom: 24px !important;
+}
+
+.wp-block-verdure-vidteaser .wp-block-cover__inner-container .wp-block-buttons {
+    opacity: 1 !important;
+}
+
+/* Person does not use section, indent editor */
+
+
+.post-type-vd_person .editor-styles-wrapper {
+    padding: var(--gu2);
+}
+
+/* Editor always full width without section block */
+
+.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper {
+    margin: 0 !important;
+}
+
+/* stylelint-disable max-line-length */
+
+.editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: 100% !important;
+}
+/* stylelint-enable max-line-length */
+
+/* Show Page Title like a field */
+
+.editor-post-title__input {
+    padding: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 25px !important;
+    text-align: center;
+    margin: 0 !important;
+}
+
+/* stylelint-enable selector-class-pattern */

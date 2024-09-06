@@ -1,0 +1,3 @@
+<?php
+
+// Wordpress complain if this file doesnt exist...

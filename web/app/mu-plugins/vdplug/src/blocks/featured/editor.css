@@ -1,0 +1,4 @@
+.featured .wp-block-group p {
+    overflow: initial;
+    display: block;
+}
