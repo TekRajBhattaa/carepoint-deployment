@@ -25,13 +25,6 @@ jobs:
       - name: Build Frontend Assets
         run: npm run build
 
-      # Deploy Bedrock's wp-config.php file to the correct location
-      - name: Deploy wp-config.php from SRC_PATH to REMOTE_PATH
-        run: |
-          rsync -az -e "ssh -o StrictHostKeyChecking=no -i ${{ secrets.WPE_SSHG_KEY_PRIVATE }}" \
-          web/wp-config.php \
-          ${{ secrets.WPE_USER }}@${{ secrets.WPE_HOST }}:/sites/${{ secrets.WPE_ENV }}/web/wp-config.php
-
       # Deploy to WP Engine (Development)
       - name: Deploy to WP Engine (Dev)
         if: github.ref == 'refs/heads/development'
@@ -57,5 +50,7 @@ jobs:
         with:
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           WPE_ENV: 'cpnewdev'
+          SRC_PATH: "web/"
+          REMOTE_PATH: "web/"
           CACHE_CLEAR: TRUE
           
