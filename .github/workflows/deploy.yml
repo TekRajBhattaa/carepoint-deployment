@@ -43,6 +43,9 @@ jobs:
           WPE_ENV: 'Stg'
           CACHE_CLEAR: TRUE
 
+      - name: List Web Directory 
+        run: ls -la web
+
       # Deploy to WP Engine (Production)
       - name: Deploy to WP Engine (Production)
         if: github.ref == 'refs/heads/main'
