@@ -1,51 +1,35 @@
-name: Deploy to WP Engine
+name: Deploy to AWS Lightsail
 
 on:
   push:
     branches:
-      - main
+      - main  # Deploy when the main branch is pushed
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      
-      # Install Composer dependencies
-      - name: Install Composer Dependencies
-        run: composer update
-      
-      # Install NPM dependencies
-      - name: Install NPM Dependencies
-        run: npm install
+    - name: Checkout the repository
+      uses: actions/checkout@v3
 
-      # Build Frontend Assets
-      - name: Build Frontend Assets
-        run: npm run build
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.LIGHTSAIL_SSH_KEY }}  # Your .pem file added to GitHub Secrets
+        key_name: id_rsa
+        known_hosts: |
+          3.224.100.210  # Lightsail static IP
 
-      # Deploy to WP Engine (Development)
-      - name: Deploy to WP Engine (Dev)
-        if: github.ref == 'refs/heads/development'
-        uses: wpengine/github-action-wpe-site-deploy@v3
-        with:
-          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
-          WPE_ENV: 'Dev'
-          CACHE_CLEAR: TRUE
+    - name: Sync files to AWS Lightsail
+      run: |
+        rsync -avz --delete ./ bitnami@3.224.100.210:/opt/bitnami/nginx/html/
 
-      # Deploy to WP Engine (Staging)
-      - name: Deploy to WP Engine (Staging)
-        if: github.ref == 'refs/heads/staging'
-        uses: wpengine/github-action-wpe-site-deploy@v3
-        with:
-          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
-          WPE_ENV: 'Stg'
-          CACHE_CLEAR: TRUE
-
-      # Deploy to WP Engine (Production)
-      - name: Deploy to WP Engine (Production)
-        if: github.ref == 'refs/heads/main'
-        uses: wpengine/github-action-wpe-site-deploy@v3
-        with:
-          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
-          WPE_ENV: 'cpnewprod'
-          CACHE_CLEAR: TRUE
+    - name: Run build commands on Lightsail
+      run: |
+        ssh -o StrictHostKeyChecking=no bitnami@3.224.100.210 << 'EOF'
+        cd /opt/bitnami/nginx/html/
+        composer update
+        npm install
+        npm run build
+        EOF
