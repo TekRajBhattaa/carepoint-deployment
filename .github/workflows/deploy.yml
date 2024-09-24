@@ -48,4 +48,4 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "sudo /opt/bitnami/ctlscript.sh restart nginx"
 
       - name: Deployment completed Successfully
-        run: echo "Deployment completed successfully"
+        run: echo "Deployment completed successfully!"
