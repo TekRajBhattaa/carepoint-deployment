@@ -13,11 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up SSH for AWS Lightsail
+        run: |
+          echo "${{ secrets.LIGHTSAIL_KEY }}" > lightsail_key.pem
+          chmod 600 lightsail_key.pem
+
       - name: Copy files to AWS Lightsail instance
         run: |
-          chmod 600 ${{ secrets.LIGHTSAIL_KEY }}
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.LIGHTSAIL_KEY }} bitnami@${{ secrets.LIGHTSAIL_IP }} "sudo rm -rf ${LIGHTSAIL_ROOT_DIR}/*"
-          scp -o StrictHostKeyChecking=no -i ${{ secrets.LIGHTSAIL_KEY }} -r * bitnami@${{ secrets.LIGHTSAIL_IP }}:${{ secrets.LIGHTSAIL_ROOT_DIR }}
+          ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "sudo rm -rf ${LIGHTSAIL_ROOT_DIR}/*"
+          scp -o StrictHostKeyChecking=no -i lightsail_key.pem -r * bitnami@${{ secrets.LIGHTSAIL_IP }}:${{ secrets.LIGHTSAIL_ROOT_DIR }}
 
       - name: Run Composer and NPM commands on Lightsail instance
         run: |
