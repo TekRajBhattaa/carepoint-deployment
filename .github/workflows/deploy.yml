@@ -3,33 +3,34 @@ name: Deploy to AWS Lightsail
 on:
   push:
     branches:
-      - main  # Deploy when the main branch is pushed
+      - main  # Adjust this if you're using a different branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.LIGHTSAIL_SSH_KEY }}  # Your .pem file added to GitHub Secrets
-        key_name: id_rsa
-        known_hosts: |
-          3.224.100.210  # Lightsail static IP
+      - name: Copy files to AWS Lightsail instance
+        run: |
+          chmod 600 ${{ secrets.LIGHTSAIL_KEY }}
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.LIGHTSAIL_KEY }} bitnami@${{ secrets.LIGHTSAIL_IP }} "sudo rm -rf ${LIGHTSAIL_ROOT_DIR}/*"
+          scp -o StrictHostKeyChecking=no -i ${{ secrets.LIGHTSAIL_KEY }} -r * bitnami@${{ secrets.LIGHTSAIL_IP }}:${{ secrets.LIGHTSAIL_ROOT_DIR }}
 
-    - name: Sync files to AWS Lightsail
-      run: |
-        rsync -avz --delete ./ bitnami@3.224.100.210:/opt/bitnami/nginx/html/
+      - name: Run Composer and NPM commands on Lightsail instance
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.LIGHTSAIL_KEY }} bitnami@${{ secrets.LIGHTSAIL_IP }} "
+            cd ${LIGHTSAIL_ROOT_DIR} &&
+            composer update &&
+            npm install &&
+            npm run build
+          "
 
-    - name: Run build commands on Lightsail
-      run: |
-        ssh -o StrictHostKeyChecking=no bitnami@3.224.100.210 << 'EOF'
-        cd /opt/bitnami/nginx/html/
-        composer update
-        npm install
-        npm run build
-        EOF
+      - name: Restart Nginx on AWS Lightsail
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.LIGHTSAIL_KEY }} bitnami@${{ secrets.LIGHTSAIL_IP }} "sudo /opt/bitnami/ctlscript.sh restart nginx"
+      
+      - name: Deployment completed Successfully
+        run: echo "Deployment completed successfuly"
