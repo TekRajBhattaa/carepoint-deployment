@@ -18,10 +18,11 @@ jobs:
           echo "${{ secrets.LIGHTSAIL_KEY }}" > lightsail_key.pem
           chmod 600 lightsail_key.pem
 
-      - name: Copy files to AWS Lightsail instance
+      - name: Pull code from GitHub to AWS Lightsail
         run: |
-          ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "sudo rm -rf ${LIGHTSAIL_ROOT_DIR}/*"
-          scp -o StrictHostKeyChecking=no -i lightsail_key.pem -r * bitnami@${{ secrets.LIGHTSAIL_IP }}:${{ secrets.LIGHTSAIL_ROOT_DIR }}
+          ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
+          cd /opt/bitnami/nginx/html &&
+          git pull origin main"
 
       - name: Run Composer and NPM commands on Lightsail instance
         run: |
