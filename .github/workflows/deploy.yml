@@ -35,8 +35,9 @@ jobs:
       - name: Run Composer and NPM commands on Lightsail instance
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
-            cd /opt/bitnami/nginx/html/carepoint-deployment &&
-            composer update &&
+            export NVM_DIR=\"$HOME/.nvm\"
+            [ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"
+            cd /opt/bitnami/nginx/html &&
             npm install &&
             npm run build
           "
@@ -44,6 +45,6 @@ jobs:
       - name: Restart Nginx on AWS Lightsail
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "sudo /opt/bitnami/ctlscript.sh restart nginx"
-      
+
       - name: Deployment completed Successfully
-        run: echo "Deployment completed successfully!"
+        run: echo "Deployment completed successfully"
