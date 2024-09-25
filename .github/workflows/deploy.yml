@@ -35,30 +35,9 @@ jobs:
       - name: Run Composer and NPM commands on Lightsail instance
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
-            # Explicitly remove any incorrect NVM setup and install fresh
-            unset NVM_DIR
-            export NVM_DIR=\"$HOME/.nvm\"
-            rm -rf \$NVM_DIR  # Delete any existing NVM installation to ensure a clean slate
-
-            # Install NVM and ensure the proper version of Node.js is used
-            echo 'Installing NVM...'
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-
-            # Load NVM in the current shell session
-            . \$NVM_DIR/nvm.sh
-
-            # Install and use the latest LTS version of Node.js
-            nvm install --lts
-            nvm use --lts
-
-            # Verify installation of Node.js and NPM
-            node -v
-            npm -v
-
-            # Navigate to project directory and run Composer and NPM commands
-            cd /opt/bitnami/nginx/html/carepoint-deployment
-            composer update
-            npm install
+            cd /opt/bitnami/nginx/html/carepoint-deployment &&
+            composer update &&
+            npm install &&
             npm run build
           "
 
