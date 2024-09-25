@@ -35,6 +35,7 @@ jobs:
       - name: Run Composer and NPM commands on Lightsail instance
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
+            source /home/bitnami/.nvm/nvm.sh &&
             cd /opt/bitnami/nginx/html/carepoint-deployment &&
             composer update &&
             npm install &&
