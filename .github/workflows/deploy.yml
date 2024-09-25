@@ -35,16 +35,35 @@ jobs:
       - name: Run Composer and NPM commands on Lightsail instance
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
-            export NVM_DIR=\"$HOME/.nvm\"
-            source $NVM_DIR/nvm.sh
-            nvm use node
-            export PATH=$NVM_DIR/versions/node/$(nvm version)/bin:\$PATH
+            # Load NVM or install NVM if not available
+            if [ -s \"$HOME/.nvm/nvm.sh\" ]; then
+              echo 'NVM is already installed';
+              source $HOME/.nvm/nvm.sh;
+            else
+              echo 'Installing NVM';
+              curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash;
+              export NVM_DIR=\"$HOME/.nvm\"
+              source $NVM_DIR/nvm.sh;
+              nvm install node;
+            fi
+
+            # Use the correct Node version
+            nvm use node;
+
+            # Check if NPM is installed
+            if command -v npm >/dev/null 2>&1; then
+              echo 'NPM is installed';
+            else
+              echo 'NPM is not installed, installing it now';
+              nvm install --latest-npm;
+            fi
+
+            # Run the required commands
             cd /opt/bitnami/nginx/html/carepoint-deployment &&
             composer update &&
             npm install &&
             npm run build
           "
-
 
       - name: Restart Nginx on AWS Lightsail
         run: |
