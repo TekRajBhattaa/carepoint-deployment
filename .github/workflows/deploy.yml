@@ -36,13 +36,15 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
             export NVM_DIR=\"$HOME/.nvm\"
-            [ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"  # This loads nvm
+            source $NVM_DIR/nvm.sh
             nvm use node
+            export PATH=$NVM_DIR/versions/node/$(nvm version)/bin:\$PATH
             cd /opt/bitnami/nginx/html/carepoint-deployment &&
             composer update &&
             npm install &&
             npm run build
           "
+
 
       - name: Restart Nginx on AWS Lightsail
         run: |
