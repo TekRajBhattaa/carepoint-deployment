@@ -38,16 +38,16 @@ jobs:
             # Check if NVM is installed, else install it
             if [ -s \"$HOME/.nvm/nvm.sh\" ]; then
               echo 'NVM is already installed';
-              source $HOME/.nvm/nvm.sh;
+              export NVM_DIR=\"$HOME/.nvm\"
+              [ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\";  # Source nvm
             else
               echo 'Installing NVM';
               curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash;
               export NVM_DIR=\"$HOME/.nvm\"
-              source $NVM_DIR/nvm.sh;
-              nvm install node;
+              [ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\";  # Source nvm
             fi
 
-            # Install Node and NPM globally if not installed
+            # Install Node and NPM globally
             nvm install --lts  # Install latest LTS version of Node.js
             nvm use --lts       # Use the latest LTS version
 
