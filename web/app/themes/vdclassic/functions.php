@@ -308,3 +308,11 @@ function vdclassic_author_page_redirect() {
     }
 }
 add_action( 'template_redirect', 'vdclassic_author_page_redirect' );
+
+
+
+function cc_mime_types( $mimes ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+  }
+  add_filter( 'upload_mimes', 'cc_mime_types' );

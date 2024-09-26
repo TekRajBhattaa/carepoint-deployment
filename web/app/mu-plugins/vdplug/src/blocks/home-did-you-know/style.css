@@ -1,0 +1,111 @@
+.home-did-you-know {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.home-did-you-know .home-first-qcp-inner-blocks-container ul {
+  padding: 0px;
+}
+
+.home-did-you-know .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  color: var(--wp--preset--color--cp-text-darkblue); 
+  max-width: 902px;
+  text-transform: unset;
+  margin: auto !important;
+  margin-bottom: 24px !important;
+}
+
+.home-did-you-know ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  margin-bottom: 37px !important;
+}
+
+.home-did-you-know ul li {
+  position: relative;
+  padding-left: 37px;
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-lightblue); 
+  margin-bottom: 25px;
+}
+
+.home-did-you-know ul li::before {
+  content: url("../../../static/arrow-bg.png");
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+}
+.home-did-you-know .wp-block-columns:first-child {
+  display: flex;
+  align-items: center;
+}
+.home-did-you-know .wp-block-columns:last-child {
+  display: flex;
+  gap: 0px;
+  align-items: center !important;
+}
+.home-did-you-know .wp-block-columns:first-child .wp-block-column:first-child {
+  flex-basis: 55% !important;
+}
+.home-did-you-know .wp-block-columns:first-child .wp-block-column:last-child {
+  flex-basis: 45% !important;
+}
+.home-did-you-know
+  .wp-block-columns:first-child
+  .wp-block-column:first-child
+  .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  text-align: left;
+  white-space: pre;
+}
+.home-did-you-know .wp-block-columns:first-child .wp-block-column:last-child p,
+.home-did-you-know
+  .wp-block-columns:first-child
+  .wp-block-column:first-child
+  p {
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-lightblue);
+  margin: 0px;
+}
+
+.home-did-you-know .wp-block-buttons .wp-block-button .wp-block-button__link {
+  position: relative;
+  padding-right: 50px !important;
+  border-radius: 30px;
+}
+
+.home-did-you-know
+  .wp-block-buttons
+  .wp-block-button
+  .wp-block-button__link::after {
+  content: url("../../../static/small-arrow.png");
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .home-did-you-know .wp-block-columns:last-child {
+    flex-direction: column;
+  }
+}

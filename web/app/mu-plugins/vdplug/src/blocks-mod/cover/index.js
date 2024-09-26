@@ -23,7 +23,7 @@ registerBlockVariation('core/cover', {
         className: 'hero',
         providerNameSlug: 'hero',
         useFeaturedImage: false,
-        url: '/app/mu-plugins/vdplug/static/example-1920.jpg',
+        url: '/app/mu-plugins/vdplug/static/carepoint-bg.jpg',
         customOverlayColor: "#FFF",
         minHeight: 400,
         minHeightUnit: 'px',
@@ -63,7 +63,7 @@ registerBlockVariation('core/cover', {
     ],
     example: {
         attributes: {
-            url: "/app/mu-plugins/vdplug/static/example-1920.jpg"
+            url: "/app/mu-plugins/vdplug/static/carepoint-bg.jpg"
         }
     },
     allowedBlocks: [

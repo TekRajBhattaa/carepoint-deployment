@@ -1,0 +1,137 @@
+.home-first-qcp-section {
+  position: relative;
+  padding: 110px 0 65px 0;
+}
+.home-first-qcp-section .wp-block-columns {
+  margin: 0px;
+}
+
+.home-first-qcp-section .home-first-qcp-img img {
+  max-width: 649px;
+  width: 649px;
+}
+
+.home-first-qcp-section .home-first-qcp-inner-blocks-container ul {
+  padding: 0px;
+}
+
+.home-zero-risk-offer {
+  margin-top: 70px;
+  margin-bottom: 110px;
+}
+
+.home-zero-risk-offer p {
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left; 
+  color: var(--wp--preset--color--cp-text-lightblue); 
+  margin-bottom: 25px;
+}
+.home-zero-risk-offer .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-darkblue); 
+  padding-top: 50px;
+  margin-bottom: 40px !important;
+  text-transform: unset !important;
+}
+
+.home-zero-risk-offer .wp-block-buttons .wp-block-button:first-child {
+  width: 280px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--wp--preset--color--cp-brand-green);
+  border-radius: 30px;
+  border: none;
+  padding: 0 30px;
+  font-family: carepoint;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-white); 
+  padding-right: 50px !important;
+}
+.home-zero-risk-offer
+  .wp-block-buttons
+  .wp-block-button:first-child
+  .wp-block-button__link {
+  position: relative;
+  font-size: 16px;
+}
+.home-zero-risk-offer
+  .wp-block-buttons
+  .wp-block-button:first-child
+  .wp-block-button__link:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.home-zero-risk-offer
+  .wp-block-buttons
+  .wp-block-button:last-child
+  .wp-block-button__link:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.home-zero-risk-offer
+  .wp-block-buttons
+  .wp-block-button:first-child
+  .wp-block-button__link::after {
+  content: url("../../../static/video.png");
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -30px;
+}
+.home-zero-risk-offer .wp-block-buttons .wp-block-button:last-child {
+  width: 285px;
+  height: 56px;
+  background-color: var(--wp--preset--color--cp-brand-orange);
+  border: none;
+  border-radius: 30px;
+  color: var(--wp--preset--color--cp-text-white); 
+  font-family: carepoint;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: left;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-zero-risk-offer
+  .wp-block-buttons
+  .wp-block-button
+  .wp-block-button__link {
+  background: transparent;
+  border: none;
+  padding: 0px !important;
+  white-space: pre !important;
+  font-size: 16px;
+}
+
+.home-zero-risk-offer .wp-block-buttons {
+  width: 610px;
+  position: relative;
+  z-index: 999;
+}
+
+@media (max-width: 600px) {
+  .home-first-qcp-section .wp-block-heading {
+    width: auto;
+  }
+  .home-first-qcp-section p {
+    width: auto;
+  }
+  .home-first-qcp-section .wp-block-buttons {
+    width: auto;
+  }
+}

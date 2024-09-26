@@ -1,0 +1,29 @@
+.fivestar {
+/* 
+    width: 1140px;
+    margin: auto;
+    border: 1px solid red;
+    background: none !important; */
+}
+
+
+
+/* .fivestar h4{
+    te
+} */
+
+.text-box-align-right{
+    text-align: right !important;
+}
+.text-box-align-center{
+    text-align: center !important;
+}
+.text-box-align-left{
+    text-align: left !important;
+}
+
+.buttons{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}

@@ -10,7 +10,7 @@ function vdblog_block_categories($categories)
         [
             [
                     'slug' => 'vdplug',
-                    'title' => 'Hornet Blocks',
+                    'title' => 'Carepoint Blocks',
                     'icon'  => null,
             ]
         ]
@@ -30,7 +30,49 @@ require_once VDPLUG_DIR . 'build/blocks/gridcols/index.php';
 require_once VDPLUG_DIR . 'build/blocks/pageteaser/index.php';
 require_once VDPLUG_DIR . 'build/blocks/section/index.php';
 require_once VDPLUG_DIR . 'build/blocks/vdslider/index.php';
+require_once VDPLUG_DIR . 'build/blocks/trusted-slider/index.php';
+
 require_once VDPLUG_DIR . 'build/blocks/fivestar/index.php';
+require_once VDPLUG_DIR . 'build/blocks/hero-section/index.php';
+require_once VDPLUG_DIR . 'build/blocks/repeater-list-with-icon/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-control-plan/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-zero-risk-offer/index.php';
+require_once VDPLUG_DIR . 'build/blocks/image-section/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-faq-section/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-qa-software/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-qc-solutions/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-iso-compliance/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-cards/index.php';
+require_once VDPLUG_DIR . 'build/blocks/home-did-you-know/index.php';
+require_once VDPLUG_DIR . 'build/blocks/about-banner/index.php';
+require_once VDPLUG_DIR . 'build/blocks/about-first-section/index.php';
+require_once VDPLUG_DIR . 'build/blocks/about-our-values/index.php';
+require_once VDPLUG_DIR . 'build/blocks/about-our-principles/index.php';
+require_once VDPLUG_DIR . 'build/blocks/about-our-history/index.php';
+require_once VDPLUG_DIR . 'build/blocks/team-section/index.php';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+require_once VDPLUG_DIR . 'build/blocks/home-first-qcp/index.php';
+
+
+require_once VDPLUG_DIR . 'build/blocks/new/index.php';
+require_once VDPLUG_DIR . 'build/blocks/new2/index.php';
+
+// require_once VDPLUG_DIR . 'build/blocks/hero-section/index.php';
+
 require_once VDPLUG_DIR . 'build/blocks/featured/index.php';
 require_once VDPLUG_DIR . 'build/blocks/counter/index.php';
 require_once VDPLUG_DIR . 'build/blocks/bloginfo/index.php';
@@ -85,13 +127,36 @@ function vdplug_allowed_block_types($allowed_blocks, $editor_context)
         /* custom */
         'verdure/box',
         'verdure/related',
+        'verdure/repeater-list-with-icon',
         'verdure/section',
+        'verdure/hero-section',
+        'verdure/new2',
+        'verdure/home-first-qcp',
+        'verdure/home-control-plan',
+        'verdure/home-zero-risk-offer',
+        'verdure/new',
+        'verdure/home-qa-software',
+        'verdure/home-faq-section',
+        'verdure/image-section',
+        'verdure/home-qc-solutions',
+        'verdure/home-iso-compliance',
+        'verdure/home-cards',
+        'verdure/home-did-you-know',
+        "verdure/about-banner",
+        "verdure/about-first-section",
+        'verdure/about-our-values',
+        'verdure/about-our-principles',
+        'verdure/about-our-history',
+        'verdure/team-section',
+        // 'verdure/hero-section',
         'verdure/accordion',
         'verdure/pageteaser',
         'verdure/category-teaser',
         'verdure/vdslider',
         'verdure/vdslider-item',
+        'verdure/trusted-slider',
         'verdure/fivestar',
+        // 'verdure/banner',
         'verdure/counter',
         'verdure/gridcols',
         'verdure/featured',

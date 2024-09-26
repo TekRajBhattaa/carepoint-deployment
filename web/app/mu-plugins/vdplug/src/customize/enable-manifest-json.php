@@ -89,8 +89,8 @@ function vdplug_manifest_link()
     echo <<<HTML
     <link rel="manifest" href="/manifest.webmanifest"  crossorigin="use-credentials">
     <link rel="apple-touch-icon" sizes="180x180" href="$logoUrl/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="$logoUrl/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="$logoUrl/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="$logoUrl/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="$logoUrl/favicon-32x32.ico">
     <link rel="mask-icon" href="$logoUrl/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#336699">

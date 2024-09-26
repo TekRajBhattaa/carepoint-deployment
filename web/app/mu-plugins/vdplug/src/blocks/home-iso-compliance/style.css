@@ -1,0 +1,67 @@
+.iso-section {
+  position: relative;
+  min-height: 705px;
+  height: auto;
+}
+
+.iso-section .hero-img {
+  position: absolute;
+  min-height: 705px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.important-workflow-section {
+  height: 128px;
+  width: 100%;
+  background-color: var(--wp--preset--color--cp-brand-blue); 
+  color: var(--wp--preset--color--cp-text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: carepoint;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.04px;
+  text-align: center;
+  padding: 0 23%;
+}
+
+.iso-section .inner-blocks-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.iso-section  .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+color: var(--wp--preset--color--cp-text-white);
+text-transform: unset !important;
+  
+}
+.iso-section  .wp-block-group p{
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--wp--preset--color--cp-text-white);
+  max-width: 555px;
+  margin: auto;
+}
+
+
+
+@media (max-width: 600px) {
+  .iso-section {
+    min-height: 1500px;
+  }
+
+.iso-section .hero-img {
+  min-height: 1500px;
+}
+}

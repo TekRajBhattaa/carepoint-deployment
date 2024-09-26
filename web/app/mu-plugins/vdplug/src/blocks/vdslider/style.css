@@ -1,4 +1,5 @@
 .vdslider {
+    padding-bottom: 80px;
     position: relative;
     --arrowBtnW: 44px;
     --arrowBtnH: 44px;
@@ -9,6 +10,7 @@
     --swiper-pagination-bullet-inactive-opacity: 1;
     --swiper-pagination-bullet-inactive-color: #fff;
     --swiper-pagination-bullet-horizontal-gap: 7.5px;
+    /* background-color: red; */
 }
 
 
@@ -22,14 +24,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--arrowBtnW, 44px);
-    height: var(--arrowBtnH, 44px);
+    width: var(--arrowBtnW, 40px);
+    height: var(--arrowBtnH, 40px);
+    border-radius: 50%;
     top: 50%;
     margin-top: -22px;
-    color: #fff;
+    color: #86973b;
     background: transparent;
     padding: 0;
+    box-sizing: 1px solid;
     border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), /* subtle shadow */
+              0 6px 20px rgba(0, 0, 0, 0.1); /* deeper shadow */
     @media (--vp-small-max) {
         display: none;
     }
@@ -41,11 +47,14 @@
 }
 
 .vdslider__nav--next {
-    right: 0;
+    right: 15%;
+    cursor: pointer;
 }
 
 .vdslider__nav--prev {
-    left: 0;
+    left: 15%;
+    cursor: pointer;
+
 }
 
 /* === V A R I A N T S === */
@@ -60,10 +69,10 @@
 /* With navigation */
 
 .vdslider--has-navigation  .swiper {
-    @media (--vp-small) {
-        margin-left: var(--arrowBtnW, 44px);
-        margin-right: var(--arrowBtnW, 44px);
-    }
+    /* @media (--vp-small) {
+        margin-left: var(--arrowBtnW, 0px);
+        margin-right: var(--arrowBtnW, 0px);
+    } */
 }
 
 .section:where(.alignwide) .section__inner:has(.vdslider--hornetbox) {
@@ -73,6 +82,115 @@
     padding: 0;
 }
 
-.vdslider--hornetbox {
-    visibility: hidden;
+.vdslider --hornetbox {
+    /* visibility: hidden; */
 }
+
+
+
+.testimonial-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+  
+      }
+
+
+      .testimonial-heading  p{
+        font-family: carepoint;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.36px;
+        letter-spacing: 0.2em;
+        text-align: center;
+        color: #86973b;
+        margin-bottom: 10px;
+      }
+
+           
+      .testimonial-heading    h2 {
+        font-family: carepoint;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43.56px;
+        text-align: left;
+        color: #15354d;
+      }
+
+
+      .wp-block-verdure-box {
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0px;
+        box-shadow: none;
+    }
+
+    .wp-block-verdure-box .wp-block-group > .wp-block-group {
+        background: #fff;
+        padding: 32px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 60px;
+        position: relative;
+
+        
+        
+    }
+
+    
+    .wp-block-verdure-box .wp-block-group > .wp-block-group::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+
+        /* Creating an upside-down triangle */
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 40px solid #ffffff; /* Change the color as needed */
+
+        /* Adjust the position of the triangle if needed */
+        bottom: -40px;
+        left: 15px;
+      }
+
+
+      .wp-block-verdure-box .wp-block-group > .wp-block-group > p{
+        font-size: 18px;
+        color: #15354D;
+        margin: 0px;
+        font-family: carepoint;
+        font-weight: 400;
+      }
+
+      .wp-block-verdure-box .wp-block-columns {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 20px;
+      }
+      .wp-block-verdure-box .wp-block-columns  .wp-block-column:first-child{
+        flex-basis: 20% !important;
+      } 
+      .wp-block-verdure-box .wp-block-columns  .wp-block-column:last-child{
+        flex-basis: 80% !important;
+      } 
+
+      .wp-block-verdure-box .wp-block-columns  .wp-block-column:last-child h3{
+        color: #000;
+        margin: 0px !important;
+        font-size: 18px;
+        color: #15354D;
+        font-weight: 500;
+
+      }
+      .wp-block-verdure-box .wp-block-columns  .wp-block-column:last-child p{
+        color: #000;
+        margin: 0px;
+        font-size: 18px;
+      }
+/* 
+      star {
+        margin-bottom: 16px;
+      } */

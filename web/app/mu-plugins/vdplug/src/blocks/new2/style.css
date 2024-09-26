@@ -1,0 +1,42 @@
+.fivestar {
+/* 
+    width: 1140px;
+    margin: auto;
+    border: 1px solid red;
+    background: none !important; */
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+    padding: 0px !important;
+}
+
+@media(max-width:1366px) {
+    .container{
+
+        padding: 20px !important;
+    }
+}
+
+
+/* .fivestar h4{
+    te
+} */
+
+.text-box-align-right{
+    text-align: right !important;
+}
+.text-box-align-center{
+    text-align: center !important;
+}
+.text-box-align-left{
+    text-align: left !important;
+}
+
+.buttons{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+

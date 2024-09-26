@@ -1,0 +1,40 @@
+
+
+.home-control-plan .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  text-align: center;
+  color: var(--wp--preset--color--cp-text-darkblue); 
+  max-width: 902px;
+  text-transform: unset;
+  margin: auto !important;
+  margin-bottom: 53px !important;
+}
+
+.home-control-plan ul {
+  list-style: none; 
+  padding: 0; 
+}
+
+.home-control-plan ul li {
+  position: relative; 
+  padding-left: 37px;
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-lightblue); 
+  margin-bottom: 25px;
+}
+
+.home-control-plan ul li::before {
+  content: url("../../../static/tick.svg");
+  position: absolute;
+  left: 0;
+  top: 5px; 
+  width: 20px; 
+  height: 20px;
+}

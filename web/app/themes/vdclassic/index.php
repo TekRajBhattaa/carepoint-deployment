@@ -19,15 +19,8 @@ $paged = max(1, get_query_var('paged'));
 <main id="primary" class="main">
     <!-- TEMPLATE: Post Archive List Template -->
     <?php
-    // $page_data = get_page_by_path('blog');
-    // echo $page_data->post_content;
-
     $page_data = get_page_by_path('blog');
-    if ($page_data && !empty($page_data->post_content)) {
-        echo $page_data->post_content;
-    } else {
-        echo "Content not found.";
-    }
+    echo $page_data->post_content;
     ?>
 
     <section class="section alignwide">

@@ -1,0 +1,30 @@
+.image-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.image-section .wp-block-group {
+  max-width: 978px;
+  min-height: 183px;
+  margin: auto;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-section .wp-block-group .wp-block-image {
+  margin: 0 30px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.image-section p {
+  font-family: carepoint;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+  text-align: center;
+  color: var(--wp--preset--color--cp-text-darkblue); 
+  margin-bottom: 40px;
+}

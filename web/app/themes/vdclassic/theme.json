@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/theme.json",
-    "version": 2,
+    "version": 3,
     "settings": {
         "appearanceTools": false,
         "custom": {
@@ -81,7 +81,7 @@
                 {
                     "name": "Regal Blue",
                     "slug": "regal-blue",
-                    "color":  "#094462"
+                    "color": "#094462"
                 },
                 {
                     "name": "Blue",
@@ -122,6 +122,66 @@
                     "name": "Dark Denim Blue",
                     "slug": "dark-denim-blue",
                     "color": "#003952"
+                },
+                {
+                    "name": "Light Orange",
+                    "slug": "light-orange-test",
+                    "color": "#c79154"
+                },
+                {
+                    "name": "Dark Red",
+                    "slug": "dark-red-test",
+                    "color": "#FF0000"
+                },
+                {
+                    "name": "Default White",
+                    "slug": "default-white-test",
+                    "color": "#f9f9f9"
+                },
+                {
+                    "name": "Default Black",
+                    "slug": "default-black-test",
+                    "color": "#111111"
+                },
+                {
+                    "name": "Light Green",
+                    "slug": "light-green-test",
+                    "color": "#90ee90"
+                },
+                {
+                    "name": "CP Brand Blue",
+                    "slug": "cp-brand-blue",
+                    "color": "#11578A"
+                },
+                {
+                    "name": "CP Brand Green",
+                    "slug": "cp-brand-green",
+                    "color": "#86973B"
+                },
+                {
+                    "name": "CP Brand Orange",
+                    "slug": "cp-brand-orange",
+                    "color": "#EF8322"
+                },
+                {
+                    "name": "CP Text White",
+                    "slug": "cp-text-white",
+                    "color": "#FFFFFF"
+                },
+                {
+                    "name": "CP Text Darkblue",
+                    "slug": "cp-text-darkblue",
+                    "color": "#15354D"
+                },
+                {
+                    "name": "CP Text Lightblue",
+                    "slug": "cp-text-lightblue",
+                    "color": "#445766"
+                },
+                {
+                    "name": "CP Text Darkblack",
+                    "slug": "cp-text-darkblack",
+                    "color": "#000000"
                 }
             ],
             "gradients": [
@@ -143,6 +203,7 @@
             ]
         },
         "typography": {
+            "fluid": false,
             "dropCap": false,
             "lineHeight": false,
             "letterSpacing": false,
@@ -154,7 +215,7 @@
         },
         "layout": {
             "contentSize": "940px",
-            "wideSize": "1320px"
+            "wideSize": "1140px"
         },
         "blocks": {
             "core/spacer": {
@@ -241,14 +302,14 @@
     },
     "styles": {
         "color": {
-            "background": "var(--wp--preset--color--pure-white, #fff)",
-            "text": "var(--wp--preset--color--white, #fff)"
+            "background": "var(--wp--preset--color--cp-text-white, #fff)",
+            "text": "var(--wp--preset--color--dark-red-test, #FF0000)"
         },
         "spacing": {
             "blockGap": "1.5rem"
         },
         "typography": {
-            "fontFamily": "Hornet",
+            "fontFamily": "Carepoint",
             "fontWeight": "300",
             "lineHeight": "var(--wp--custom--typo--line-height)",
             "fontSize": "var(--wp--custom--typo--root-size)"

@@ -3,6 +3,7 @@ import {
     useBlockProps,
     useInnerBlocksProps,
     InspectorControls,
+    RichText
 } from "@wordpress/block-editor";
 import classnames from "classnames";
 import { Fragment } from "@wordpress/element";
@@ -16,7 +17,10 @@ import {
 } from "@wordpress/components";
 import "./editor.css";
 
-const TEMPLATE = [["verdure/vdslider-item"]];
+const TEMPLATE = [
+    // ['verdure/vdslider-item']
+];
+
 const ALLOWED_BLOCKS = ["verdure/vdslider-item"];
 const LAYOUT = {
     type: "default",
@@ -24,6 +28,16 @@ const LAYOUT = {
 };
 
 export default function Edit({ attributes, setAttributes, isSelected }) {
+
+    const { smallHeading, heading } = attributes;
+
+
+    const onChangeText = (newText) => {
+        setAttributes({ smallHeading: newText });
+    };
+    const onChangeText2 = (newText) => {
+        setAttributes({ heading: newText });
+    };
     const blockProps = useBlockProps({
         className: classnames({
             "vdslider": true,
@@ -31,9 +45,9 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
             "vdslider--has-pagination": attributes.hasPagination,
             "vdslider--has-loop": attributes.hasLoop
         }),
-        ...(attributes.className.includes("vdslider--hornetbox")) && {'data-spacebetween': attributes.spaceBetween,'data-maxitems': attributes.maxDesktopItems},
-    }); 
-    
+        ...(attributes.className.includes("vdslider--hornetbox")) && { 'data-spacebetween': attributes.spaceBetween, 'data-maxitems': attributes.maxDesktopItems },
+    });
+
     const innerBlocksProps = useInnerBlocksProps(blockProps, {
         allowedBlocks: ALLOWED_BLOCKS,
         template: TEMPLATE,
@@ -90,8 +104,8 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
                                     }
                                 />
                             </BaseControl>
-                            
-                            {attributes.className.includes("vdslider--hornetbox") &&
+
+                            {/* {attributes.className.includes("vdslider--hornetbox") && */}
                                 <BaseControl>
                                     <SelectControl
                                         label={__('Select desktop items:')}
@@ -102,8 +116,8 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
                                             })
                                         }
                                         options={[
-                                            { value: '3.5', label: '3.5' },
-                                            { value: '2.5', label: '2.5' }
+                                            { value: '3', label: '3' },
+                                            { value: '2', label: '2' }
                                         ]}
                                     />
                                     <TextControl
@@ -116,14 +130,31 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
                                         }
                                     />
                                 </BaseControl>
-                            }
+                            {/* // } */}
                         </PanelBody>
                     </Panel>
                 )}
             </InspectorControls>
 
+
+
             <div {...innerBlocksProps}  >
-                <div className="swiper">
+
+
+
+
+                <div className="swiper container">
+
+                    <div className="testimonial-heading">
+                        <RichText value={smallHeading} tagName="P" onChange={onChangeText}>
+
+                        </RichText>
+                        <RichText value={heading} tagName="h2" onChange={onChangeText2}>
+
+                        </RichText>
+
+
+                    </div>
                     <div className="vdslider__items swiper-wrapper">
                         {innerBlocksProps.children}
                     </div>
@@ -143,6 +174,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
                         </button>
                     </>
                 )}
+
             </div>
         </Fragment>
     );

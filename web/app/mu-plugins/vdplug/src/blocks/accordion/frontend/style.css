@@ -24,16 +24,18 @@
 }
 
 .accordion {
-    border-top: 1px solid var(--wp--preset--color--vanadyl-blue);
+    border-top: 1px solid #CBCFE6;
     border-bottom: 0;
 }
 
 .accordion details:last-child {
-    border-bottom: 1px solid var(--wp--preset--color--vanadyl-blue);
+    border-bottom: 1px solid #CBCFE6;
 }
-
+.accordion:first-child {
+    border-top: none;
+}
 .accordion:last-of-type {
-    border-bottom: 1px solid var(--wp--preset--color--vanadyl-blue);
+    border-bottom: 1px solid #CBCFE6;
 }
 
 .accordion__content > *:first-child {
@@ -41,7 +43,7 @@
 }
 
 .accordion__content {
-    padding: 0 0 var(--gu2);
+    /* padding: 0 0 var(--gu2); */
     animation: sweepOut 0.5s ease-in-out;
 }
 
@@ -52,13 +54,13 @@
     cursor: pointer;
     list-style: none;
     outline: 0;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     padding-top: 18px;
     padding-bottom: 5px;
 }
 
 .accordion summary:hover {
-    background-color: var(--wp--preset--color--dark-denim-blue);
+    /* background-color: var(--wp--preset--color--dark-denim-blue); */
 }
 
 .accordion summary::-webkit-details-marker {
@@ -76,6 +78,10 @@
     transition: transform 200ms ease-in-out;
     pointer-events: none;
     margin-top: -10px;
+    padding: 5px;
+    border-radius: 50%;
+border: 1px solid #00000062;
+    color: #999999;
 }
 
 .accordion[open] summary {
@@ -85,15 +91,27 @@
 
 .accordion[open] summary .icon {
     transform: rotate(90deg);
+    background-color: #869540;
+    /* padding-left: 5px; */
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
 }
 
 .accordion[open] summary ~ .accordion__content {
     animation: sweepIn 0.5s ease-in-out;
-    padding: 0 15px;
-    padding-top: 25px;
+    /* padding: 0 15px; */
+    padding-top: 0px;
     padding-bottom: 5px;
 }
 
 .accordion .accordion__title {
-    font-size: 20px;
+    font-family: carepoint;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.04px;
+    text-align: left;
+    color: #15354D;
+    
 }

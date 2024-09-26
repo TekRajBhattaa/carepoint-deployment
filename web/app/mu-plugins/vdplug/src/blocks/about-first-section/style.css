@@ -1,0 +1,108 @@
+.about-first-section {
+  position: relative;
+  padding: 70px 0;
+}
+
+.about-first-section .home-first-qcp-inner-blocks-container ul {
+  padding: 0px;
+}
+
+.about-first-section .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  color: var(--wp--preset--color--cp-text-darkblue);
+  text-transform: unset;
+  margin-bottom: 24px !important;
+}
+
+.about-first-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+}
+
+.about-first-section ul li {
+  position: relative;
+  padding-left: 37px;
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-lightblue);
+  margin-bottom: 25px;
+}
+
+.about-first-section ul li::before {
+  content: url("../../../static/tick.svg");
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+}
+.about-first-section .wp-block-columns:first-child {
+  display: flex;
+  align-items: center;
+}
+.about-first-section .wp-block-columns:last-child {
+  display: flex;
+}
+.about-first-section
+  .wp-block-columns:first-child
+  .wp-block-column:first-child {
+  flex-basis: 25% !important;
+}
+.about-first-section .wp-block-columns:first-child .wp-block-column:last-child {
+  flex-basis: 75% !important;
+}
+.about-first-section
+  .wp-block-columns:first-child
+  .wp-block-column:first-child
+  .wp-block-heading {
+  font-family: carepoint;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: left;
+  background: var(--wp--preset--color--cp-text-darkblue);
+  color: var(--wp--preset--color--cp-text-white);
+  max-width: 360px;
+  padding: 66px 44px;
+  margin-top: -115px !important;
+}
+.about-first-section .wp-block-columns:first-child .wp-block-column p {
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-lightblue);
+  margin-bottom: 20px;
+  padding-left: 4px;
+}
+
+.about-first-section .wp-block-columns:last-child .wp-block-column:first-child {
+  flex-basis: 360px !important;
+}
+.about-first-section .wp-block-columns:last-child .wp-block-column:last-child {
+  flex-basis: 1 !important;
+}
+.about-first-section .wp-block-buttons .wp-block-button .wp-block-button__link {
+  position: relative;
+  padding-right: 50px !important;
+  border-radius: 30px;
+}
+
+.about-first-section
+  .wp-block-buttons
+  .wp-block-button
+  .wp-block-button__link::after {
+  content: url("../../../static/small-arrow.png");
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  right: 20px;
+}

@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/about-our-values",
+    "version": "1.0.0",
+    "title": "about-our-values",
+    "description": "about-our-values",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "keywords": [
+        "about-our-values"
+    ],
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": null
+        },
+       
+        "text": {
+            "type": "string"
+        },
+        "alignment": {
+            "type": "string",
+            "default": "left"
+        },
+        "button1": {
+            "type": "string",
+               "default": "enter your button text"
+        },
+        "button2": {
+            "type": "string",
+               "default": "enter your button text 2"
+        },
+        "backgroundColor": {
+            "type": "string"
+              
+        },
+        "textColor": {
+            "type": "string"
+              
+        }
+    },
+    
+   
+    
+   
+    "textdomain": "vdplug",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css"
+}

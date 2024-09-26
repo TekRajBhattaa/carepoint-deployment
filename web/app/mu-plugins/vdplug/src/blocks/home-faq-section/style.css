@@ -1,0 +1,70 @@
+.home-faq-section{
+position: relative;
+padding: 110px 0 65px 0 ;
+background: #11578A0D;
+}
+
+.home-faq-section .wp-block-group{
+    position: relative;
+
+}
+.home-faq-section .wp-block-group::before{
+    position: absolute;
+    content:url("../../../static/arrow.png");
+    right: 10%;
+    bottom: 0;
+
+}
+.home-faq-section .wp-block-columns {
+gap: 197px;
+}
+.home-faq-section .wp-block-column:first-child{
+flex-basis: 32%;
+}
+.home-faq-section .wp-block-column:last-child{
+    flex-basis: 68%;
+    }
+    
+
+.home-faq-section .wp-block-button__link {
+    background-color: var(--wp--preset--color--cp-brand-green); 
+    border: none ;
+    border-radius: 32px;
+}
+
+
+.home-faq-section p{
+    font-family: carepoint;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+    color: var(--wp--preset--color--cp-text-lightblue); 
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.home-faq-section .wp-block-heading{
+    font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-darkblue); 
+  padding-top: 50px;
+  margin-bottom: 40px !important;
+  text-transform: unset !important;
+  padding-top: 0px;
+}
+
+.home-faq-section h3{
+    font-family: carepoint;
+  font-size: 24px !important;
+  font-weight: 700;
+  line-height: 29.04px !important;
+  text-align: left;
+  color:var(--wp--preset--color--cp-text-lightblue) !important; 
+  padding-top: 50px;
+  margin-bottom: 40px !important;
+  text-transform: unset !important;
+}
+

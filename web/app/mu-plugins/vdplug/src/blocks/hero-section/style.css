@@ -1,0 +1,154 @@
+.hero-section {
+  position: relative;
+  height: 705px;
+}
+
+.hero-section .hero-img {
+  position: absolute;
+  height: 705px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.important-workflow-section {
+  height: 128px;
+  width: 100%;
+  background-color:var(--wp--preset--color--cp-brand-blue); 
+  color: var(--wp--preset--color--cp-text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: carepoint;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.04px;
+  text-align: center;
+  padding: 0 23%;
+}
+
+.inner-blocks-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-section .wp-block-heading {
+  font-family: carepoint;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 62.92px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-white);
+  margin-bottom: 36px;
+  width: 541px;
+}
+
+.hero-section p {
+  font-family: carepoint;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-white);
+  margin-bottom: 42px;
+  width: 541px;
+}
+
+.hero-section .wp-block-buttons .wp-block-button:first-child {
+  width: 280px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--wp--preset--color--cp-brand-green);
+  border-radius: 30px;
+  border: none;
+  padding: 0 30px;
+  font-family: carepoint;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-white);
+  padding-right: 50px !important;
+}
+.hero-section
+  .wp-block-buttons
+  .wp-block-button:first-child
+  .wp-block-button__link {
+  position: relative;
+  font-size: 16px;
+}
+.hero-section
+  .wp-block-buttons
+  .wp-block-button:first-child
+  .wp-block-button__link:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.hero-section
+  .wp-block-buttons
+  .wp-block-button:last-child
+  .wp-block-button__link:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.hero-section
+  .wp-block-buttons
+  .wp-block-button:first-child
+  .wp-block-button__link::after {
+  content: url("../../../static/video.png");
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -30px;
+}
+.hero-section .wp-block-buttons .wp-block-button:last-child {
+  width: 285px;
+  height: 56px;
+  background-color:var(--wp--preset--color--cp-brand-orange); 
+  border: none;
+  border-radius: 30px;
+  color: var(--wp--preset--color--cp-text-white);
+  font-family: carepoint;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  text-align: left;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section .wp-block-buttons .wp-block-button .wp-block-button__link {
+  background: transparent;
+  border: none;
+  padding: 0px !important;
+  white-space: pre !important;
+  font-size: 16px;
+}
+
+.hero-section .wp-block-buttons {
+  width: 610px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .hero-section .wp-block-heading {
+    width: auto;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48.92px;
+    margin-bottom: 36px;
+  }
+
+  .hero-section p {
+    width: auto;
+  }
+  .hero-section .wp-block-buttons {
+    width: auto;
+  }
+}
+
+

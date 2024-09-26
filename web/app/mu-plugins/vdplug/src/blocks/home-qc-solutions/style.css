@@ -1,0 +1,102 @@
+.home-qc-solutions {
+  position: relative;
+}
+
+.home-qc-solutions .home-first-qcp-inner-blocks-container ul {
+  padding: 0px;
+}
+
+.home-qc-solutions .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  color: var(--wp--preset--color--cp-text-darkblue); 
+  max-width: 902px;
+  text-transform: unset;
+  margin: auto !important;
+  margin-bottom: 24px !important;
+}
+
+.home-qc-solutions ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  margin-bottom: 37px !important;
+}
+
+.home-qc-solutions ul li {
+  position: relative;
+  padding-left: 37px;
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-lightblue); 
+  margin-bottom: 25px;
+}
+
+.home-qc-solutions ul li::before {
+  content: url("../../../static/tick.svg");
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+}
+.home-qc-solutions .wp-block-columns:first-child {
+  display: flex;
+  align-items: center;
+}
+.home-qc-solutions .wp-block-columns:last-child {
+  display: flex;
+  gap: 91px;
+}
+.home-qc-solutions .wp-block-columns:first-child .wp-block-column:first-child {
+  flex-basis: 55% !important;
+}
+.home-qc-solutions .wp-block-columns:first-child .wp-block-column:last-child {
+  flex-basis: 45% !important;
+}
+.home-qc-solutions
+  .wp-block-columns:first-child
+  .wp-block-column:first-child
+  .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  text-align: left;
+  white-space: pre;
+}
+.home-qc-solutions .wp-block-columns:first-child .wp-block-column:last-child p,
+.home-qc-solutions
+  .wp-block-columns:first-child
+  .wp-block-column:first-child
+  p {
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: var(--wp--preset--color--cp-text-lightblue); 
+  margin: 0px;
+}
+
+.home-qc-solutions .wp-block-buttons .wp-block-button .wp-block-button__link {
+  position: relative;
+  padding-right: 50px !important;
+  border-radius: 30px;
+}
+
+.home-qc-solutions
+  .wp-block-buttons
+  .wp-block-button
+  .wp-block-button__link::after {
+  content: url("../../../static/small-arrow.png");
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  right: 20px;
+}

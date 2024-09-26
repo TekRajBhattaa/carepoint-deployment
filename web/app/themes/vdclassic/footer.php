@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -12,68 +13,82 @@
 ?>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer__meta">
-            <div class="footer__navs">
-                <?php if (has_nav_menu('nav-footer')) : ?>
-                    <?php
-                        wp_nav_menu(
+
+
+
+
+    <div class="footer__bottom footer_section">
+        <div class="container">
+            <div class="left">
+
+                <div>
+                    <h2>Sign Up for Our Newsletter.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    <form action="">
+                        <input type="email" placeholder=" Enter your email">
+                        <button>Subscribe Now</button>
+                    </form>
+                    </p>
+                </div>
+                <!-- 
+
+                <div class="footer-logo">
+                    <a href="<//? // php echo esc_url(home_url('/')); ?>" title="< //? //php bloginfo('name'); ?>" rel="home">
+                        <img width="128" height="62"
+                            src="<//? //php echo get_stylesheet_directory_uri() ?>/footer-logo.png"
+                            loading="lazy"
+                            alt="Hornetsecurity GmbH">
+                    </a>
+                </div> -->
+
+            </div><!-- .site-info -->
+            <div class="right">
+                <div class="inner-section">
+
+
+               
+                <nav class="footer__subnav">
+
+
+                    <nav class="primenav footer-nav">
+                        <?php wp_nav_menu(
                             array(
+                                'theme_location' => 'nav-primary',
+                                'menu_id'        => '',
+                                'depth'          => 3,
                                 'container'      => false,
-                                'depth'          => 2,
-                                'items_wrap'     => '%3$s',
-                                'theme_location' => 'nav-footer',
-                                'walker' => new VdFooterNavWalker()
+                                'walker' => new VdPrimaryNavWalker()
                             )
-                        );
-                    ?>
-                <?php endif; ?><!-- ./footer-nav -->
+                        ); ?>
+                    </nav>
+
+                    <nav class="primenav footer-nav">
+                        <?php wp_nav_menu(
+                            array(
+                                'theme_location' => 'nav-primary',
+                                'menu_id'        => '',
+                                'depth'          => 3,
+                                'container'      => false,
+                                'walker' => new VdPrimaryNavWalker()
+                            )
+                        ); ?>
+                    </nav>
+
+                    <div class="social">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/facebook.png" alt="">
+
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/linked.png" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/twitter.png" alt="">
+                    </div>
+
+                </nav>
+                <p class="copyright-text">© 2024 CarePoint Solutions Inc. All Rights Reserved.</p>
+                </div>
+
+
+
             </div>
 
-            <?php if (is_active_sidebar('footer-1')) : ?>
-                <div class="footer__info">
-                    <?php dynamic_sidebar('footer-1'); ?>
-
-                    <div class="footer__socialshare footer__socialshare--large">
-                        <a aria-label="Facebook" href="https://www.facebook.com/antispameurope/" target="_blank" rel="noreferrer noopener">
-                            <svg aria-hidden="true" class="icon"><use href="/ico.svg#facebook"></use></svg>
-                        </a>
-                        <a aria-label="X" href="https://twitter.com/Hornetsecurity" target="_blank" rel="noreferrer noopener">
-                            <svg style="width:16px;height:16px;" aria-hidden="true" class="icon"><use href="/ico.svg#x"></use></svg>
-                        </a>
-                        <a aria-label="Linkedin" href="https://www.linkedin.com/company/hornetsecurity" target="_blank" rel="noreferrer noopener">
-                            <svg aria-hidden="true" class="icon"><use href="/ico.svg#linkedin"></use></svg>
-                        </a>
-                        <a aria-label="youtube" href="http://www.youtube.com/@hornetsecurity" target="_blank" rel="noreferrer noopener">
-                            <svg aria-hidden="false" class="icon"><use href="/ico.svg#youtube"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-
-    <div class="footer__bottom">
-        <div class="container">
-            <div class="site-info">
-                <?php
-                /* translators: %s: CMS name, i.e. WordPress. */
-                printf(esc_html__('© %s %s All rights reserved', 'vdclassic'), date('Y'), 'Hornetsecurity GmbH.');
-                ?>
-            </div><!-- .site-info -->
-
-            <nav class="footer__subnav">
-                <?php wp_nav_menu(
-                    array(
-                        'container'      => false,
-                        'menu_id'        => '',
-                        'menu_class'     => '',
-                        'depth'          => 2,
-                        'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'theme_location' => 'nav-footer-sub'
-                    )
-                ); ?>
-            </nav>
         </div>
     </div>
 </footer><!-- .footer -->
@@ -83,8 +98,11 @@
 <?php wp_footer(); ?>
 
 <a href="#primary" class="scrolltotop">
-    <svg class="icon"><use href="/ico.svg#arrow-up"></use></svg>
+    <svg class="icon">
+        <use href="/ico.svg#arrow-up"></use>
+    </svg>
 </a>
 
 </body>
+
 </html>

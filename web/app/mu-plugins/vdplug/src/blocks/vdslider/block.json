@@ -31,7 +31,16 @@
         "spaceBetween": {
             "type": "string",
             "default": 20
-        }
+        },
+        "smallHeading":{
+        "type":"string",
+        "default":"TESTIMONIALS"
+
+        },
+      "heading":{
+        "type":"string",
+        "default":"What Our Customer Say!"
+      }
     },
     "variations": [
         {
@@ -72,7 +81,7 @@
         },
         {
             "name": "verdure/vdslider-hornetbox",
-            "title": "Hornetbox Slider",
+            "title": "Testimonial slider",
             "description": "A Hornetbox slider ....",
             "isDefault": false,
             "isActive": ["className"],
@@ -89,10 +98,69 @@
                             {},
                             [
                                 [
-                                    "core/paragraph",
-                                    {
-                                        "content": "Slide 1"
-                                    }
+                                    "core/group",
+                                    {},
+                                    [
+                                        [
+                                            "core/group",
+                                            {},
+                                            [
+                                                [
+                                                    "verdure/fivestar", 
+                                                    {}
+                                                ],
+                                                [
+                                                    "core/paragraph",
+                                                    {
+                                                        "content": "This is a rating for Slide 1"
+                                                    }
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "core/columns",
+                                            {},
+                                            [
+                                                [
+                                                    "core/column",
+                                                    {},
+                                                    [
+                                                        [
+                                                            "core/image",
+                                                            {
+                                                                "url": "https://example.com/image1.jpg",
+                                                                "alt": "Slide 1 Image"
+                                                            }
+                                                        ]
+                                                    ]
+                                                ],
+                                                [
+                                                    "core/column",
+                                                    {},
+                                                    [
+                                                        [
+                                                            "core/group",
+                                                            {},
+                                                            [
+                                                                [
+                                                                    "core/heading",
+                                                                    {
+                                                                        "content": "Heading 1"
+                                                                    }
+                                                                ],
+                                                                [
+                                                                    "core/paragraph",
+                                                                    {
+                                                                        "content": "Slide 1"
+                                                                    }
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
                                 ]
                             ]
                         ]
@@ -107,10 +175,69 @@
                             {},
                             [
                                 [
-                                    "core/paragraph",
-                                    {
-                                        "content": "Slide 2"
-                                    }
+                                    "core/group",
+                                    {},
+                                    [
+                                        [
+                                            "core/group",
+                                            {},
+                                            [
+                                                [
+                                                    "verdure/fivestar", 
+                                                    {}
+                                                ],
+                                                [
+                                                    "core/paragraph",
+                                                    {
+                                                        "content": "This is a rating for Slide 2"
+                                                    }
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "core/columns",
+                                            {},
+                                            [
+                                                [
+                                                    "core/column",
+                                                    {},
+                                                    [
+                                                        [
+                                                            "core/image",
+                                                            {
+                                                                "url": "https://example.com/image2.jpg",
+                                                                "alt": "Slide 2 Image"
+                                                            }
+                                                        ]
+                                                    ]
+                                                ],
+                                                [
+                                                    "core/column",
+                                                    {},
+                                                    [
+                                                        [
+                                                            "core/group",
+                                                            {},
+                                                            [
+                                                                [
+                                                                    "core/heading",
+                                                                    {
+                                                                        "content": "Heading 2"
+                                                                    }
+                                                                ],
+                                                                [
+                                                                    "core/paragraph",
+                                                                    {
+                                                                        "content": "Slide 2"
+                                                                    }
+                                                                ]
+                                                            ]
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
                                 ]
                             ]
                         ]
@@ -118,6 +245,8 @@
                 ]
             ]
         }
+        
+        
     ],
     "example": {},
     "editorScript": "file:index.js",

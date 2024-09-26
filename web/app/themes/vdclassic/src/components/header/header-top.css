@@ -1,9 +1,15 @@
 .header-top {
     background-color: var(--wp--preset--color--catskill-white);
+    @media (--vp-medium) {
+        display: none;
+    }
+
+
 }
 
 .header-top__inner {
     display: flex;
+    background-color: #fff;
     align-items: center;
     max-width: var(--wp--style--global--wide-size);
     margin: auto;

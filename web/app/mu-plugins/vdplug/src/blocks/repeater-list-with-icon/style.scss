@@ -1,0 +1,47 @@
+
+
+.wp-block-create-block-repeater-list-with-icon {
+  background-color: #21759b;
+  color: var(--wp--preset--color--cp-text-white); 
+  padding: 2px;
+}
+
+
+.repeater-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.repeater-list-item img {
+  margin-right: 10px;
+}
+
+.wp-block-verdure-repeater-list-with-icon {
+  .repeater-list-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 43px;
+
+    img {
+      width: 42px !important;
+      height: 42px !important;
+      margin: 0px;
+      max-width: 42px !important;
+    }
+
+    p {
+      font-family: carepoint;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left; 
+      color: var(--wp--preset--color--cp-text-lightblue); 
+      margin: 0px;
+    }
+    .text {
+      @extend p;
+    }
+  }
+}

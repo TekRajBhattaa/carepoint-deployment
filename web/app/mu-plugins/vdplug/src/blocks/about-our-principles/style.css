@@ -1,0 +1,140 @@
+.about-our-principles {
+  position: relative;
+  /* min-height: 705px; */
+  height: auto;
+}
+
+
+.important-workflow-section {
+  height: 128px;
+  width: 100%;
+  background-color: var(--wp--preset--color--cp-brand-blue);
+  color: var(--wp--preset--color--cp-text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-family: carepoint;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.04px;
+  text-align: center;
+  padding: 0 23%;
+}
+
+.about-our-principles .inner-blocks-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-our-principles .wp-block-heading {
+  font-family: carepoint;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.56px;
+  /* color: var(--wp--preset--color--cp-text-white); */
+  color: #15354d;
+  text-transform: unset !important;
+}
+.about-our-principles .wp-block-group p {
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  /* color: var(--wp--preset--color--cp-text-white); */
+  color: #445766;
+
+  max-width: 555px;
+  margin: auto;
+}
+
+.about-our-principles .wp-block-verdure-home-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  list-style: none;
+  margin-top: 50px;
+  padding: 0px;
+}
+
+.about-our-principles .wp-block-verdure-home-cards .card-items {
+  background: #ffffff3d;
+  height: 298px;
+  border-radius: 12px;
+  border: 1px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.about-our-principles .wp-block-verdure-home-cards .card-items p {
+  font-family: carepoint;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  /* color: var(--wp--preset--color--cp-text-white); */
+  color: #445766;
+  margin: 0px;
+}
+
+/* .about-our-principles .wp-block-verdure-home-cards .card-items .img-box {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--wp--preset--color--cp-brand-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  margin-top: -90px;
+  margin-bottom: 24px;
+} */
+
+.about-our-principles .wp-block-verdure-home-cards .card-items  h2 {
+  font-family: carepoint;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #15354d;
+  margin-top: 24px !important;
+  margin-bottom: 16px;
+  text-transform: unset !important;
+}
+
+.about-our-principles .wp-block-verdure-home-cards .card-items .img-box img {
+  height: 80px !important;
+  width: 80px !important;
+}
+
+@media (max-width: 1200px) {
+
+  .about-our-principles .wp-block-verdure-home-cards{
+
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-our-principles .wp-block-verdure-home-cards{
+
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-our-principles {
+    min-height: 1500px;
+  }
+
+  .about-our-principles .hero-img {
+    min-height: 1500px;
+  }
+}

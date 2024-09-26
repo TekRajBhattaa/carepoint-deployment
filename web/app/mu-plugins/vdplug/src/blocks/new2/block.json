@@ -1,0 +1,47 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "verdure/new2",
+    "version": "1.0.0",
+    "title": "new2",
+    "description": "Add a fivestar Block.",
+    "icon": "welcome-widgets-menus",
+    "category": "vdplug",
+    "keywords": [
+        "fivestar rating"
+    ],
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageId": {
+            "type": "number",
+            "default": null
+        },
+       
+        "text": {
+            "type": "string"
+        },
+        "alignment": {
+            "type": "string",
+            "default": "left"
+        },
+  
+        "backgroundColor": {
+            "type": "string"
+              
+        },
+        "textColor": {
+            "type": "string"
+              
+        }
+    },
+    
+   
+    
+   
+    "textdomain": "vdplug",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css"
+}
