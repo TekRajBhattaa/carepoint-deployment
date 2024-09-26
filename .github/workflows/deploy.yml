@@ -32,6 +32,15 @@ jobs:
             fi
           "
 
+      - name: Create .env file and set values
+        run: |
+          ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
+            cd /opt/bitnami/nginx/html/carepoint-deployment &&
+            cp .env.example .env &&
+            echo 'WP_HOME=\"http://204.236.248.85/\"' >> .env &&
+            echo 'WP_SITEURL=\"http://204.236.248.85/wp\"' >> .env
+          "
+
       - name: Run Composer and NPM commands on Lightsail instance
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
