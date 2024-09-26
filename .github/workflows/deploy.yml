@@ -21,14 +21,14 @@ jobs:
       - name: Clone repository if not exists or pull changes
         run: |
           ssh -o StrictHostKeyChecking=no -i lightsail_key.pem bitnami@${{ secrets.LIGHTSAIL_IP }} "
-            if [ ! -d /opt/bitnami/nginx/html/.git ]; then
-              # If .git doesn't exist, clone the repository
+            if [ -d /opt/bitnami/nginx/html/carepoint-deployment/.git ]; then
+              # If the repository exists, pull the latest changes
+              cd /opt/bitnami/nginx/html/carepoint-deployment &&
+              git pull origin main
+            else
+              # If the repository doesn't exist, clone it
               cd /opt/bitnami/nginx/html &&
               git clone https://github.com/TekRajBhattaa/carepoint-deployment.git
-            else
-              # If .git exists, pull the latest changes
-              cd /opt/bitnami/nginx/html &&
-              git pull origin main
             fi
           "
 
